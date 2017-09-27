@@ -1,14 +1,19 @@
-Site1: "https://fim.temple.edu"
-  test1: "Test login"
-    url: "https://stackoverflow.com/users/login?ssrc=head&returnurl=https%3a%2f%2fstackoverflow.com%2fquestions%2f42136253%2fbeautifulsoup-and-request-post"
-    method: "POST"
-      case1: "test login with email and password"
-        input:
-          -
-            param: "email"
-            value: ["test@gmail.com", "test@"]
-          -
-            param: "password"
-            value: ["my_correct_password", "something"]
-        output:
-          httpStatus: 200
+-
+  name: "http://stackoverflow.com"
+  tests:
+    -
+      name: "Test login"
+      url: "https://stackoverflow.com/users/login?ssrc=head&returnurl=https%3a%2f%2fstackoverflow.com%2fquestions%2f42136253%2fbeautifulsoup-and-request-post"
+      method: "POST"
+      cases:
+        -
+          name: "test login with email and password"
+          input:
+            -
+              param: "email"
+              value: ["test@gmail.com", "test@"]
+            -
+              param: "password"
+              value: ["my_correct_password", "something"]
+          output:
+            httpStatus: 200
