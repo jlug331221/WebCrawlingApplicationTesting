@@ -5,10 +5,10 @@ Site1: "https://fim.temple.edu"
       case1: "test login with email and password"
         input:
           -
-            rule: "#username"
+            param: "j_username"
             value: ["test@gmail.com", "test@"]
           -
-            rule: "#password"
+            param: "j_password"
             value: ["my_correct_password", "something"]
         output:
           httpStatus: 200
