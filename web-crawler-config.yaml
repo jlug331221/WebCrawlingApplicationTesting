@@ -1,14 +1,14 @@
 Site1: "https://fim.temple.edu"
   test1: "Test login"
-    url: "https://fim.temple.edu/idp/profile/cas/login;jsessionid=B163D40C0D02FA2F015D50856DA4B8B9?execution=e1s1"
+    url: "https://stackoverflow.com/users/login?ssrc=head&returnurl=https%3a%2f%2fstackoverflow.com%2fquestions%2f42136253%2fbeautifulsoup-and-request-post"
     method: "POST"
       case1: "test login with email and password"
         input:
           -
-            param: "j_username"
+            param: "email"
             value: ["test@gmail.com", "test@"]
           -
-            param: "j_password"
+            param: "password"
             value: ["my_correct_password", "something"]
         output:
           httpStatus: 200
