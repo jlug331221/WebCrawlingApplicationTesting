@@ -1,7 +1,10 @@
 import re
 
-# Extract a feature vector from the input fields of a form within an HTML file
-def extractFeatures(soupElement):
+# Extract a feature vector from the input field of a form within an HTML file.
+# Note: This is used for testing the extraction of a feature vector from a simple HTML
+# file with a form. Form has one input element and one label. File used is in the 'forms'
+# directory and is named 'simpleForm.html'.
+def extractFeaturesSimple(soupElement):
   featureVector = []
 
   # Attribute list concerns input topic identification in an attribute list
@@ -17,6 +20,25 @@ def extractFeatures(soupElement):
     if value and key in attributeList:
       value = re.sub('[^a-zA-Z0-9]', ' ', value.lower())
       featureVector += [key, value]
+
+  return featureVector
+
+# Extract features from input elements in a form within an HTML file.
+def extractFeatures(soupElement):
+  featureVector = []
+  inputElements = soupElement.find_all('input')
+  for inputElement in inputElements:
+    # Attribute list concerns input topic identification in an attribute list
+    attributeList = ['id', 'name', 'value', 'type', 'placeholder', 'maxlength']
+
+    labelFeatures = findClosestLabels(inputElement, iterations=5)
+    if labelFeatures:
+      featureVector += labelFeatures
+
+    for key, value in inputElement.attrs.items():
+      if value and key in attributeList:
+        value = re.sub('[^a-zA-Z0-9]', ' ', value.lower())
+        featureVector += [key, value]
 
   return featureVector
 
