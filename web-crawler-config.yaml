@@ -1,5 +1,5 @@
 -
-  name: "http://stackoverflow.com"
+  name: "Stackoverflow.com site"
   tests:
     -
       name: "Test login"
@@ -8,12 +8,16 @@
       cases:
         -
           name: "test login with email and password"
-          input:
-            -
-              param: "email"
-              value: ["test@gmail.com", "test@"]
-            -
-              param: "password"
-              value: ["my_correct_password", "something"]
+          params:
+            email: "test@gmail.com"
+            password: "my_correct_password"
+
           output:
-            httpStatus: 200
+            status_code: 200
+        -
+          name: "test login with incorrect email format"
+          params:
+            email: "test@g"
+            password: "something"
+          output:
+            status_code: 400
