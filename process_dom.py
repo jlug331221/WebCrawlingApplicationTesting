@@ -1,6 +1,5 @@
 import re
 
-
 # Extract a feature vector from the input fields of a form within an HTML file
 def extractFeatures(soupElement):
   featureVector = []
@@ -8,14 +7,18 @@ def extractFeatures(soupElement):
   # Attribute list concerns input topic identification in an attribute list
   attributeList = ['id', 'name', 'value', 'type', 'placeholder', 'maxlength']
 
-  labelFeatures = findClosestLabels(soupElement, iterations=5)
+  inputElement = soupElement.find('input')
+
+  labelFeatures = findClosestLabels(inputElement, iterations=5)
   if labelFeatures:
     featureVector += labelFeatures
 
-  for key, value in soupElement.attrs.items():
-    if key in attributeList:
-      featureVector += [key, re.sub('[^a-zA-Z0-9]', ' ', value.lower())]
+  for key, value in inputElement.attrs.items():
+    if value and key in attributeList:
+      value = re.sub('[^a-zA-Z0-9]', ' ', value.lower())
+      featureVector += [key, value]
 
+  return featureVector
 
 # Find the closest labels to a form input element in the DOM
 def findClosestLabels(soupElement, iterations):
@@ -30,7 +33,7 @@ def findClosestLabels(soupElement, iterations):
   candidateTags = ['span', 'label']
   for tag in candidateTags:
     labels += soupElement.find_previous_siblings(tag)
-    labels += soupElement.find_previous_siblings(tag)
+    labels += soupElement.find_next_siblings(tag)
 
     for sibling in siblings:
       labels += sibling.find_all(tag)
@@ -41,7 +44,7 @@ def findClosestLabels(soupElement, iterations):
     content = []
     for label in labels:
       for ss in label.stripped_strings:
-        content.append(re.sub('[^a-zA-Z0-9]', ' ', s.lower()))
+        content.append(re.sub('[^a-zA-Z0-9]', ' ', ss.lower()))
 
       if content:
         return content
