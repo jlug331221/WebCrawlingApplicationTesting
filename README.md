@@ -3,7 +3,7 @@
 ### Web crawling based testing
 
 We show that web crawling based testing is application specific. Testers have to manually configure the webcrawler for each web application
-and then they can perform test case generation.
+and then they can perform test.
 
 **web-crawler.py** is a sample of a crawler program that extracts features from a web form
 
