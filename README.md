@@ -10,4 +10,4 @@ and then they can perform test.
 **web-crawler-config.yaml** is the configuration file for web-crawler config. We can see that this config is application specific.
 
 
-*How do we enhance web crawling based technique to adapt multiple web applications?*
+*How do we enhance web crawling based technique to adapt multiple web applications with lower labour-intensive task?*
