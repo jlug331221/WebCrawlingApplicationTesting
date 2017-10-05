@@ -9,7 +9,7 @@ def extractFeatures(inputElement):
   inputElementAttrs = inputElement.attrs.items()
   # Only extract features for DOM input elements that are not hidden and that are not submit
   #  buttons. These are the ones that are going to be tested.
-  if not containsHiddenValueAttr(inputElementAttrs):
+  if not containsHiddenValueAttrOrSubmitButton(inputElementAttrs):
     # Attribute list concerns input topic identification in an attribute list
     attributeList = ['id', 'name', 'value', 'type', 'placeholder', 'maxlength']
 
@@ -25,7 +25,7 @@ def extractFeatures(inputElement):
   return featureVector
 
 #
-# Find the closest labels to a form input element in the DOM (HTML file)
+# Find the closest labels to a form input element in the DOM (HTML file).
 #
 def findClosestLabels(inputElement, iterations):
   if iterations == 0:
@@ -59,9 +59,9 @@ def findClosestLabels(inputElement, iterations):
 
 #
 # Returns true if inputElementAttrs contains a value of 'hidden' or 'submit' and false
-# otherwise
+# otherwise.
 #
-def containsHiddenValueAttr(inputElementAttrs):
+def containsHiddenValueAttrOrSubmitButton(inputElementAttrs):
   for key, value in inputElementAttrs:
     strValue = ''.join(value)
     if strValue.lower() == 'hidden' or strValue.lower() == 'submit':
