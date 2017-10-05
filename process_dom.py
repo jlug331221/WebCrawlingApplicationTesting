@@ -1,33 +1,15 @@
 import re
 
-# Extract a feature vector from the input field of a form within an HTML file.
-# Note: This is used for testing the extraction of a feature vector from a simple HTML
-# file with a form. Form has one input element and one label. File used is in the 'forms'
-# directory and is named 'simpleForm.html'.
-def extractFeaturesSimple(soupElement):
+#
+# Extract features from input elements in a form within the DOM (HTML file).
+#
+def extractFeatures(inputElement):
   featureVector = []
 
-  # Attribute list concerns input topic identification in an attribute list
-  attributeList = ['id', 'name', 'value', 'type', 'placeholder', 'maxlength']
-
-  inputElement = soupElement.find('input')
-
-  labelFeatures = findClosestLabels(inputElement, iterations=5)
-  if labelFeatures:
-    featureVector += labelFeatures
-
-  for key, value in inputElement.attrs.items():
-    if value and key in attributeList:
-      value = re.sub('[^a-zA-Z0-9]', ' ', value.lower())
-      featureVector += [key, value]
-
-  return featureVector
-
-# Extract features from input elements in a form within an HTML file.
-def extractFeatures(soupElement):
-  featureVector = []
-  inputElements = soupElement.find_all('input')
-  for inputElement in inputElements:
+  inputElementAttrs = inputElement.attrs.items()
+  # Only extract features for DOM input elements that are not hidden and that are not submit
+  #  buttons. These are the ones that are going to be tested.
+  if not containsHiddenValueAttr(inputElementAttrs):
     # Attribute list concerns input topic identification in an attribute list
     attributeList = ['id', 'name', 'value', 'type', 'placeholder', 'maxlength']
 
@@ -35,33 +17,35 @@ def extractFeatures(soupElement):
     if labelFeatures:
       featureVector += labelFeatures
 
-    for key, value in inputElement.attrs.items():
+    for key, value in inputElementAttrs:
       if value and key in attributeList:
         value = re.sub('[^a-zA-Z0-9]', ' ', value.lower())
         featureVector += [key, value]
 
   return featureVector
 
-# Find the closest labels to a form input element in the DOM
-def findClosestLabels(soupElement, iterations):
+#
+# Find the closest labels to a form input element in the DOM (HTML file)
+#
+def findClosestLabels(inputElement, iterations):
   if iterations == 0:
     return None
 
   siblings = []
-  siblings += soupElement.find_previous_siblings()
-  siblings += soupElement.find_next_siblings()
+  siblings += inputElement.find_previous_siblings()
+  siblings += inputElement.find_next_siblings()
 
   labels = []
   candidateTags = ['span', 'label']
   for tag in candidateTags:
-    labels += soupElement.find_previous_siblings(tag)
-    labels += soupElement.find_next_siblings(tag)
+    labels += inputElement.find_previous_siblings(tag)
+    labels += inputElement.find_next_siblings(tag)
 
     for sibling in siblings:
       labels += sibling.find_all(tag)
 
   if not labels:
-    return findClosestLabels(soupElement, iterations - 1)
+    return findClosestLabels(inputElement, iterations - 1)
   else:
     content = []
     for label in labels:
@@ -71,4 +55,16 @@ def findClosestLabels(soupElement, iterations):
       if content:
         return content
       else:
-        return findClosestLabels(soupElement.parent, iterations - 1)
+        return findClosestLabels(inputElement.parent, iterations - 1)
+
+#
+# Returns true if inputElementAttrs contains a value of 'hidden' or 'submit' and false
+# otherwise
+#
+def containsHiddenValueAttr(inputElementAttrs):
+  for key, value in inputElementAttrs:
+    strValue = ''.join(value)
+    if strValue.lower() == 'hidden' or strValue.lower() == 'submit':
+      return True
+
+  return False
