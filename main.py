@@ -6,9 +6,12 @@ current_dir = os.path.dirname(__file__)
 html_files_dir = current_dir + '/forms/'
 
 # Extract feature vectors from all college forms in the 'forms' directory
-featureVectors = []
+featureVectors = dict()
 for htmlFile in glob.glob(html_files_dir + '*.html'):
   file = open(htmlFile, 'r')
+  file_name = htmlFile.split('forms', 1)[1].split('\\', 1)[1]
+  featureVectors[file_name] = []
+
   soupElement = BS(file, 'html.parser')
 
   # Find form elements in DOM file (could be more than one form)
@@ -18,9 +21,10 @@ for htmlFile in glob.glob(html_files_dir + '*.html'):
     for inputElement in inputElements:
       featureVector = extractFeatures(inputElement)
       if featureVector:
-        featureVectors.append(featureVector)
+        featureVectors[file_name].append(featureVector)
+        #featureVectors.append(featureVector)
 
-  print('\nFile \'', htmlFile, '\' has the following extracted feature vectors:\n')
-  for featureVector in featureVectors:
+  print('\nFile \'', file_name, '\' has the following extracted feature vectors:\n')
+  for featureVector in featureVectors[file_name]:
     print(featureVector)
   print('\n************************************************')
