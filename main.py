@@ -9,7 +9,7 @@ html_files_dir = current_dir + '/forms/'
 featureVectors = dict()
 for htmlFile in glob.glob(html_files_dir + '*.html'):
   file = open(htmlFile, 'r')
-  file_name = htmlFile.split('forms', 1)[1].split('\\', 1)[1]
+  file_name = htmlFile.split('forms', 1)[1]
   featureVectors[file_name] = []
 
   soupElement = BS(file, 'html.parser')
