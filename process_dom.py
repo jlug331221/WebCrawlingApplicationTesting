@@ -3,49 +3,49 @@ import re
 #
 # Extract features from input elements in a form within the DOM (HTML file).
 #
-def extractFeatures(inputElement):
-  featureVector = []
+def extract_features(input_element):
+  feature_vector = []
 
-  inputElementAttrs = inputElement.attrs.items()
+  input_element_attrs = input_element.attrs.items()
   # Only extract features for DOM input elements that are not hidden and that are not submit
   #  buttons. These are the ones that are going to be tested.
-  if not containsHiddenValueAttrOrSubmitButton(inputElementAttrs):
+  if not contains_hidden_valueAttr_or_submitButton(input_element_attrs):
     # Attribute list concerns input topic identification in an attribute list
-    attributeList = ['id', 'name', 'value', 'type', 'placeholder', 'maxlength']
+    attr_list = ['id', 'name', 'value', 'type', 'placeholder', 'maxlength']
 
-    labelFeatures = findClosestLabels(inputElement, iterations=5)
-    if labelFeatures:
-      featureVector += labelFeatures
+    label_features = find_closest_labels(input_element, iterations=5)
+    if label_features:
+      feature_vector += label_features
 
-    for key, value in inputElementAttrs:
-      if value and key in attributeList:
+    for key, value in input_element_attrs:
+      if value and key in attr_list:
         value = re.sub('[^a-zA-Z0-9]', ' ', value.lower())
-        featureVector += [key, value]
+        feature_vector += [key, value]
 
-  return featureVector
+  return feature_vector
 
 #
 # Find the closest labels to a form input element in the DOM (HTML file).
 #
-def findClosestLabels(inputElement, iterations):
+def find_closest_labels(input_element, iterations):
   if iterations == 0:
     return None
 
   siblings = []
-  siblings += inputElement.find_previous_siblings()
-  siblings += inputElement.find_next_siblings()
+  siblings += input_element.find_previous_siblings()
+  siblings += input_element.find_next_siblings()
 
   labels = []
   candidateTags = ['span', 'label']
   for tag in candidateTags:
-    labels += inputElement.find_previous_siblings(tag)
-    labels += inputElement.find_next_siblings(tag)
+    labels += input_element.find_previous_siblings(tag)
+    labels += input_element.find_next_siblings(tag)
 
     for sibling in siblings:
       labels += sibling.find_all(tag)
 
   if not labels:
-    return findClosestLabels(inputElement, iterations - 1)
+    return find_closest_labels(input_element, iterations - 1)
   else:
     content = []
     for label in labels:
@@ -55,14 +55,14 @@ def findClosestLabels(inputElement, iterations):
       if content:
         return content
       else:
-        return findClosestLabels(inputElement.parent, iterations - 1)
+        return find_closest_labels(input_element.parent, iterations - 1)
 
 #
-# Returns true if inputElementAttrs contains a value of 'hidden' or 'submit' and false
+# Returns true if input_element_attrs contains a value of 'hidden' or 'submit' and false
 # otherwise.
 #
-def containsHiddenValueAttrOrSubmitButton(inputElementAttrs):
-  for key, value in inputElementAttrs:
+def contains_hidden_valueAttr_or_submitButton(input_element_attrs):
+  for key, value in input_element_attrs:
     strValue = ''.join(value)
     if strValue.lower() == 'hidden' or strValue.lower() == 'submit':
       return True
