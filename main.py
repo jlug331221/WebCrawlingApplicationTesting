@@ -2,6 +2,7 @@ import os, glob
 from bs4 import BeautifulSoup as BS
 from process_dom import extract_features
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
+from sklearn.decomposition import TruncatedSVD
 
 current_dir = os.path.dirname(__file__)
 html_files_dir = current_dir + '/forms/'
@@ -35,6 +36,7 @@ def extract_and_print_feature_vectors_for_static_forms():
 def main():
   feature_vectors = extract_and_print_feature_vectors_for_static_forms()
 
+  # Perform bag of words on simpleform.html
   bag_of_words = None
   vectorizer = CountVectorizer()
   print('\n')
@@ -45,12 +47,24 @@ def main():
         bag_of_words = vectorizer.fit_transform(feature_vector).toarray()
         print(bag_of_words)
         print(vectorizer.get_feature_names())
+        # print(vectorizer.inverse_transform(bag_of_words[1]))
+        print('\n')
 
+  # Once bag of words model is fit on feature vector extracted from simpleForm.html,
+  # transform counts to real numbers using tfidf
+  transformer = TfidfTransformer(smooth_idf=False)
+  tf_idf = transformer.fit_transform(bag_of_words).toarray()
 
-  #transformer = TfidfTransformer(smooth_idf=False)
-  #tfidf = transformer.fit_transform(bag_of_words)
+  print(tf_idf)
 
-  #print(tfidf.toarray())
+  print('\n')
+
+  # Apply LSI/LSA (Single Value Decomposition)
+  # LSA = Latent Semantic Analysis
+  svd = TruncatedSVD(n_iter=5)
+  svd.fit_transform(tf_idf)
+  print(svd.explained_variance_ratio_)
+  print(svd.explained_variance_)
 
 if __name__ == '__main__':
   main()
