@@ -1,8 +1,10 @@
 import re
 
+'''
 #
-# Extract features from input elements in a form within the DOM (HTML file).
+# Extract features from input_element in a form within the DOM.
 #
+'''
 def extract_features(input_element):
   feature_vector = []
 
@@ -13,7 +15,7 @@ def extract_features(input_element):
     # Attribute list concerns input topic identification in an attribute list
     attr_list = ['id', 'name', 'value', 'type', 'placeholder', 'maxlength']
 
-    label_features = find_closest_labels(input_element, iterations=5)
+    label_features = find_closest_labels(input_element)
     if label_features:
       feature_vector += label_features
 
@@ -24,10 +26,14 @@ def extract_features(input_element):
 
   return feature_vector
 
+'''
 #
-# Find the closest labels to a form input element in the DOM (HTML file).
+# Find the closest labels to input_element in the DOM.
 #
-def find_closest_labels(input_element, iterations):
+# Default iterations is set to 5.
+#
+'''
+def find_closest_labels(input_element, iterations=5):
   if iterations == 0:
     return None
 
@@ -57,10 +63,12 @@ def find_closest_labels(input_element, iterations):
       else:
         return find_closest_labels(input_element.parent, iterations - 1)
 
+'''
 #
-# Returns true if input_element_attrs contains a value of 'hidden' or 'submit' and false
-# otherwise.
+# Returns true if input_element_attrs contains a value of 'hidden' or 'submit'
+# and false otherwise.
 #
+'''
 def contains_hidden_valueAttr_or_submitButton(input_element_attrs):
   for key, value in input_element_attrs:
     strValue = ''.join(value)

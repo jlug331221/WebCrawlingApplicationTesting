@@ -1,18 +1,37 @@
 import os, glob
 from bs4 import BeautifulSoup as BS
 from process_dom import extract_features
-from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
-from sklearn.decomposition import TruncatedSVD
+import vector_transformations as vt
 
 current_dir = os.path.dirname(__file__)
 html_files_dir = current_dir + '/forms/'
 
-def extract_and_print_feature_vectors_for_static_forms():
-  # Extract feature vectors from all college forms in the 'forms' directory
+'''
+#
+# Print the contents of feature_vectors.
+#
+'''
+def print_feature_vectors(feature_vectors):
+  for html_file in glob.glob(html_files_dir + '*.html'):
+    file_name = html_file.split('forms', 1)[1]
+
+    print('\nFile \'', file_name, '\' has the following extracted feature vectors:\n')
+    for feature_vector in feature_vectors[file_name]:
+      print(feature_vector)
+    print('\n************************************************')
+
+'''
+#
+# Extract feature vectors from the 'forms' directory. This directory contains
+# all of the static university forms for testing purposes.
+#
+'''
+def extract_feature_vectors_from_university_forms():
+  # Extract feature vectors from all university forms in the 'forms' directory
   feature_vectors = dict()
-  for htmlFile in glob.glob(html_files_dir + '*.html'):
-    file = open(htmlFile, 'r')
-    file_name = htmlFile.split('forms', 1)[1]
+  for html_file in glob.glob(html_files_dir + '*.html'):
+    file = open(html_file, 'r')
+    file_name = html_file.split('forms', 1)[1]
     feature_vectors[file_name] = []
 
     soup_element = BS(file, 'html.parser')
@@ -26,45 +45,27 @@ def extract_and_print_feature_vectors_for_static_forms():
         if feature_vector:
           feature_vectors[file_name].append(feature_vector)
 
-    print('\nFile \'', file_name, '\' has the following extracted feature vectors:\n')
-    for feature_vector in feature_vectors[file_name]:
-      print(feature_vector)
-    print('\n************************************************')
-
   return feature_vectors
 
+'''
+#
+# Main global procedure.
+#
+'''
 def main():
-  feature_vectors = extract_and_print_feature_vectors_for_static_forms()
+  feature_vectors = extract_feature_vectors_from_university_forms()
+  #print_feature_vectors(feature_vectors)
 
-  # Perform bag of words on simpleform.html
-  bag_of_words = None
-  vectorizer = CountVectorizer()
-  print('\n')
-  for key in feature_vectors.keys():
-    if key == '\simpleForm.html':
-      for feature_vector in feature_vectors.get(key):
-        print(feature_vector)
-        bag_of_words = vectorizer.fit_transform(feature_vector).toarray()
-        print(bag_of_words)
-        print(vectorizer.get_feature_names())
-        # print(vectorizer.inverse_transform(bag_of_words[1]))
-        print('\n')
+  bag_of_words = vt.bag_of_words_transformation(feature_vectors)
 
-  # Once bag of words model is fit on feature vector extracted from simpleForm.html,
-  # transform counts to real numbers using tfidf
-  transformer = TfidfTransformer(smooth_idf=False)
-  tf_idf = transformer.fit_transform(bag_of_words).toarray()
+  tfidf = vt.tfidf_transformation(bag_of_words)
 
-  print(tf_idf)
+  LSA = vt.LSA_transformation(tfidf)
 
-  print('\n')
-
-  # Apply LSI/LSA (Single Value Decomposition)
-  # LSA = Latent Semantic Analysis
-  svd = TruncatedSVD(n_iter=5)
-  svd.fit_transform(tf_idf)
-  print(svd.explained_variance_ratio_)
-  print(svd.explained_variance_)
-
+'''
+#
+# Automatically extract features when executing this module.
+#
+'''
 if __name__ == '__main__':
   main()
