@@ -54,7 +54,6 @@ def extract_feature_vectors_from_university_forms():
 '''
 def main():
   feature_vectors = extract_feature_vectors_from_university_forms()
-  #print_feature_vectors(feature_vectors)
 
   bag_of_words = vt.bag_of_words_transformation(feature_vectors)
 

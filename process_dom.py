@@ -2,7 +2,7 @@ import re
 
 '''
 #
-# Extract features from input_element in a form within the DOM.
+# Extract and return features from input_element in a web form within the DOM.
 #
 '''
 def extract_features(input_element):
