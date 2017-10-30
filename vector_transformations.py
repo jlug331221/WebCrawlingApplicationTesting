@@ -1,4 +1,4 @@
-import os
+import os, re
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from sklearn.decomposition import TruncatedSVD
 
@@ -50,11 +50,23 @@ def bag_of_words_transformation(feature_vectors):
       vector_word_string = ''
       for feature_vector in feature_vectors.get(key):
         BoW_output.write(str(feature_vector) + '\n')
+
         for feature_vector_word in feature_vector:
           vector_word_string += str(feature_vector_word) + ' '
+
         feature_vector_words.append(vector_word_string)
 
-      bag_of_words[key] = count_vectorizer.fit_transform(feature_vector_words)
+        vector_word_string = ''
+
+      # remove 'id' and 'maxlength' from feature_vector_words
+      feature_vector_words_without_id_or_maxlength = []
+      for vector_words in feature_vector_words:
+        vector_words = vector_words.replace('id', '')
+        vector_words = vector_words.replace('maxlength', '')
+        feature_vector_words_without_id_or_maxlength.append(vector_words)
+
+      bag_of_words[key] = count_vectorizer\
+        .fit_transform(feature_vector_words_without_id_or_maxlength)
 
       BoW_output.write(str(bag_of_words[key]) + '\n')
       # BoW_output.write(str(bag_of_words[key].toarray()) + '\n')

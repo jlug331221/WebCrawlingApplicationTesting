@@ -9,59 +9,59 @@
 ['zip postal code  ', 'type', 'text', 'name', 'aycreatepc', 'id', 'aycreatepc', 'maxlength', '10']
 ['password  ', 'type', 'password', 'name', 'aycreatepassword', 'id', 'aycreatepassword']
 ['confirm password  ', 'type', 'password', 'name', 'aycreateconfirmpassword', 'id', 'aycreateconfirmpassword']
-  (0, 30)	1
-  (0, 31)	1
-  (0, 22)	1
-  (0, 4)	1
-  (0, 20)	1
-  (0, 32)	1
-  (0, 25)	1
   (0, 28)	1
-  (1, 27)	4
-  (1, 30)	1
-  (1, 31)	2
-  (1, 22)	1
-  (1, 4)	2
-  (1, 20)	2
-  (1, 32)	1
-  (1, 25)	2
-  (1, 28)	1
+  (0, 29)	1
+  (0, 21)	1
+  (0, 4)	1
+  (0, 30)	1
+  (0, 23)	1
+  (0, 26)	1
+  (1, 25)	4
+  (1, 29)	1
+  (1, 4)	1
+  (1, 23)	1
   (2, 2)	1
-  (2, 23)	1
   (2, 9)	2
   (2, 19)	1
-  (2, 26)	1
+  (2, 24)	1
   (2, 18)	1
-  (2, 27)	4
-  (2, 30)	2
+  (2, 28)	1
+  (2, 29)	1
+  (2, 23)	2
+  (3, 10)	2
+  (3, 17)	1
+  (3, 20)	1
+  (3, 2)	1
+  (3, 24)	1
+  (3, 28)	1
   :	:
-  (9, 24)	1
-  (9, 5)	2
-  (9, 14)	2
-  (9, 1)	1
-  (9, 8)	2
-  (9, 3)	2
-  (9, 16)	2
-  (9, 10)	2
-  (9, 17)	1
-  (9, 21)	1
-  (9, 2)	2
-  (9, 23)	4
-  (9, 9)	2
-  (9, 19)	1
-  (9, 26)	2
-  (9, 18)	1
-  (9, 27)	8
-  (9, 30)	7
-  (9, 31)	10
-  (9, 22)	1
-  (9, 4)	2
-  (9, 20)	10
-  (9, 32)	1
-  (9, 25)	12
-  (9, 28)	1
-(10, 35)
-Feature names: ['10', '120', '30', 'address', 'ay', 'aycreateconfirmemail', 'aycreateconfirmpassword', 'aycreatedob', 'aycreateemail', 'aycreatefn', 'aycreateln', 'aycreatepassword', 'aycreatepc', 'code', 'confirm', 'dd', 'email', 'family', 'first', 'given', 'id', 'last', 'login', 'maxlength', 'mm', 'name', 'or', 'password', 'pin', 'postal', 'text', 'type', 'userid', 'yyyy', 'zip']
+  (5, 23)	1
+  (6, 7)	2
+  (6, 31)	1
+  (6, 15)	1
+  (6, 22)	1
+  (6, 28)	1
+  (6, 29)	1
+  (6, 23)	1
+  (7, 0)	1
+  (7, 12)	2
+  (7, 13)	1
+  (7, 27)	1
+  (7, 32)	1
+  (7, 28)	1
+  (7, 29)	1
+  (7, 23)	1
+  (8, 11)	2
+  (8, 25)	2
+  (8, 29)	1
+  (8, 23)	1
+  (9, 6)	2
+  (9, 14)	1
+  (9, 25)	2
+  (9, 29)	1
+  (9, 23)	1
+(10, 33)
+Feature names: ['10', '120', '30', 'address', 'ay', 'aycreateconfirmemail', 'aycreateconfirmpassword', 'aycreatedob', 'aycreateemail', 'aycreatefn', 'aycreateln', 'aycreatepassword', 'aycreatepc', 'code', 'confirm', 'dd', 'email', 'family', 'first', 'given', 'last', 'login', 'mm', 'name', 'or', 'password', 'pin', 'postal', 'text', 'type', 'user', 'yyyy', 'zip']
 
 *************************************************************
 
@@ -71,44 +71,26 @@ Feature names: ['10', '120', '30', 'address', 'ay', 'aycreateconfirmemail', 'ayc
 ['type', 'password', 'name', 'check password', 'id', 'check password', 'maxlength', '25']
 ['type', 'text', 'name', 'email', 'id', 'email', 'maxlength', '35']
   (0, 1)	1
-  (0, 6)	1
-  (0, 4)	1
-  (0, 5)	2
-  (0, 7)	3
-  (0, 9)	1
-  (0, 10)	1
+  (0, 4)	2
+  (0, 5)	3
+  (0, 7)	1
+  (0, 8)	1
   (1, 0)	1
-  (1, 8)	3
-  (1, 1)	1
-  (1, 6)	2
-  (1, 4)	2
-  (1, 5)	2
-  (1, 7)	4
-  (1, 9)	1
-  (1, 10)	2
+  (1, 6)	3
+  (1, 5)	1
+  (1, 8)	1
   (2, 2)	2
-  (2, 0)	2
-  (2, 8)	6
-  (2, 1)	1
+  (2, 0)	1
   (2, 6)	3
-  (2, 4)	3
-  (2, 5)	2
-  (2, 7)	5
-  (2, 9)	1
-  (2, 10)	3
+  (2, 5)	1
+  (2, 8)	1
   (3, 3)	2
-  (3, 2)	2
-  (3, 0)	2
-  (3, 8)	6
-  (3, 1)	2
-  (3, 6)	4
-  (3, 4)	4
-  (3, 5)	2
-  (3, 7)	6
-  (3, 9)	2
-  (3, 10)	4
-(4, 11)
-Feature names: ['25', '35', 'check', 'email', 'id', 'last', 'maxlength', 'name', 'password', 'text', 'type']
+  (3, 1)	1
+  (3, 5)	1
+  (3, 7)	1
+  (3, 8)	1
+(4, 9)
+Feature names: ['25', '35', 'check', 'email', 'last', 'name', 'password', 'text', 'type']
 
 *************************************************************
 
@@ -123,59 +105,59 @@ Feature names: ['25', '35', 'check', 'email', 'id', 'last', 'maxlength', 'name',
 ['zip postal code  ', 'type', 'text', 'name', 'aycreatepc', 'id', 'aycreatepc', 'maxlength', '10']
 ['password  ', 'type', 'password', 'name', 'aycreatepassword', 'id', 'aycreatepassword']
 ['confirm password  ', 'type', 'password', 'name', 'aycreateconfirmpassword', 'id', 'aycreateconfirmpassword']
-  (0, 30)	1
-  (0, 31)	1
-  (0, 22)	1
-  (0, 4)	1
-  (0, 20)	1
-  (0, 32)	1
-  (0, 25)	1
   (0, 28)	1
-  (1, 27)	4
-  (1, 30)	1
-  (1, 31)	2
-  (1, 22)	1
-  (1, 4)	2
-  (1, 20)	2
-  (1, 32)	1
-  (1, 25)	2
-  (1, 28)	1
+  (0, 29)	1
+  (0, 21)	1
+  (0, 4)	1
+  (0, 30)	1
+  (0, 23)	1
+  (0, 26)	1
+  (1, 25)	4
+  (1, 29)	1
+  (1, 4)	1
+  (1, 23)	1
   (2, 2)	1
-  (2, 23)	1
   (2, 9)	2
   (2, 19)	1
-  (2, 26)	1
+  (2, 24)	1
   (2, 18)	1
-  (2, 27)	4
-  (2, 30)	2
+  (2, 28)	1
+  (2, 29)	1
+  (2, 23)	2
+  (3, 10)	2
+  (3, 17)	1
+  (3, 20)	1
+  (3, 2)	1
+  (3, 24)	1
+  (3, 28)	1
   :	:
-  (9, 24)	1
-  (9, 5)	2
-  (9, 14)	2
-  (9, 1)	1
-  (9, 8)	2
-  (9, 3)	2
-  (9, 16)	2
-  (9, 10)	2
-  (9, 17)	1
-  (9, 21)	1
-  (9, 2)	2
-  (9, 23)	4
-  (9, 9)	2
-  (9, 19)	1
-  (9, 26)	2
-  (9, 18)	1
-  (9, 27)	8
-  (9, 30)	7
-  (9, 31)	10
-  (9, 22)	1
-  (9, 4)	2
-  (9, 20)	10
-  (9, 32)	1
-  (9, 25)	12
-  (9, 28)	1
-(10, 35)
-Feature names: ['10', '120', '30', 'address', 'ay', 'aycreateconfirmemail', 'aycreateconfirmpassword', 'aycreatedob', 'aycreateemail', 'aycreatefn', 'aycreateln', 'aycreatepassword', 'aycreatepc', 'code', 'confirm', 'dd', 'email', 'family', 'first', 'given', 'id', 'last', 'login', 'maxlength', 'mm', 'name', 'or', 'password', 'pin', 'postal', 'text', 'type', 'userid', 'yyyy', 'zip']
+  (5, 23)	1
+  (6, 7)	2
+  (6, 31)	1
+  (6, 15)	1
+  (6, 22)	1
+  (6, 28)	1
+  (6, 29)	1
+  (6, 23)	1
+  (7, 0)	1
+  (7, 12)	2
+  (7, 13)	1
+  (7, 27)	1
+  (7, 32)	1
+  (7, 28)	1
+  (7, 29)	1
+  (7, 23)	1
+  (8, 11)	2
+  (8, 25)	2
+  (8, 29)	1
+  (8, 23)	1
+  (9, 6)	2
+  (9, 14)	1
+  (9, 25)	2
+  (9, 29)	1
+  (9, 23)	1
+(10, 33)
+Feature names: ['10', '120', '30', 'address', 'ay', 'aycreateconfirmemail', 'aycreateconfirmpassword', 'aycreatedob', 'aycreateemail', 'aycreatefn', 'aycreateln', 'aycreatepassword', 'aycreatepc', 'code', 'confirm', 'dd', 'email', 'family', 'first', 'given', 'last', 'login', 'mm', 'name', 'or', 'password', 'pin', 'postal', 'text', 'type', 'user', 'yyyy', 'zip']
 
 *************************************************************
 
@@ -183,61 +165,44 @@ Feature names: ['10', '120', '30', 'address', 'ay', 'aycreateconfirmemail', 'ayc
 ['first given name ', 'type', 'text', 'name', 'firstname', 'id', 'firstname']
 ['middle name s  ', 'type', 'text', 'name', 'middlenames', 'id', 'middlenames']
 [' last family name ', 'type', 'text', 'name', 'lastname', 'id', 'lastname']
-  (0, 4)	1
   (0, 2)	2
+  (0, 9)	1
   (0, 10)	1
-  (0, 11)	1
-  (0, 9)	2
+  (0, 8)	2
   (0, 3)	1
   (0, 1)	1
+  (1, 7)	2
+  (1, 6)	1
+  (1, 9)	1
+  (1, 10)	1
   (1, 8)	2
-  (1, 7)	1
-  (1, 4)	2
-  (1, 2)	2
-  (1, 10)	2
-  (1, 11)	2
-  (1, 9)	4
-  (1, 3)	1
-  (1, 1)	1
-  (2, 6)	2
+  (2, 5)	2
   (2, 0)	1
-  (2, 5)	1
+  (2, 4)	1
+  (2, 9)	1
+  (2, 10)	1
   (2, 8)	2
-  (2, 7)	1
-  (2, 4)	3
-  (2, 2)	2
-  (2, 10)	3
-  (2, 11)	3
-  (2, 9)	6
-  (2, 3)	1
-  (2, 1)	1
-(3, 12)
-Feature names: ['family', 'first', 'firstname', 'given', 'id', 'last', 'lastname', 'middle', 'middlenames', 'name', 'text', 'type']
+(3, 11)
+Feature names: ['family', 'first', 'firstname', 'given', 'last', 'lastname', 'mdle', 'mdlenames', 'name', 'text', 'type']
 
 *************************************************************
 
 \simple_form.html
 ['first name', 'id', 'firstname', 'name', 'firstname', 'maxlength', '45', 'type', 'text']
 ['last name', 'id', 'last name', 'name', 'last name', 'maxlength', '45', 'type', 'text']
-  (0, 7)	1
-  (0, 8)	1
-  (0, 0)	1
   (0, 5)	1
+  (0, 6)	1
+  (0, 0)	1
   (0, 2)	2
-  (0, 3)	1
-  (0, 6)	2
+  (0, 4)	2
   (0, 1)	1
-  (1, 4)	3
-  (1, 7)	2
-  (1, 8)	2
-  (1, 0)	2
-  (1, 5)	2
-  (1, 2)	2
-  (1, 3)	2
-  (1, 6)	6
-  (1, 1)	1
-(2, 9)
-Feature names: ['45', 'first', 'firstname', 'id', 'last', 'maxlength', 'name', 'text', 'type']
+  (1, 3)	3
+  (1, 5)	1
+  (1, 6)	1
+  (1, 0)	1
+  (1, 4)	4
+(2, 7)
+Feature names: ['45', 'first', 'firstname', 'last', 'name', 'text', 'type']
 
 *************************************************************
 
@@ -249,59 +214,41 @@ Feature names: ['45', 'first', 'firstname', 'id', 'last', 'maxlength', 'name', '
 ['id', 'firstname', 'maxlength', '50', 'name', 'firstname', 'type', 'text']
 ['id', 'lastname', 'maxlength', '50', 'name', 'lastname', 'type', 'text']
 ['id', 'birthdate', 'name', 'birthdate', 'type', 'date']
-  (0, 12)	1
-  (0, 13)	1
   (0, 10)	1
+  (0, 11)	1
+  (0, 8)	1
   (0, 1)	1
-  (0, 9)	1
-  (0, 14)	2
-  (0, 7)	1
+  (0, 12)	2
   (1, 4)	2
-  (1, 12)	2
-  (1, 13)	2
-  (1, 10)	2
-  (1, 1)	2
-  (1, 9)	2
-  (1, 14)	2
-  (1, 7)	2
+  (1, 10)	1
+  (1, 11)	1
+  (1, 8)	1
+  (1, 1)	1
   (2, 0)	1
-  (2, 11)	3
-  (2, 4)	2
-  (2, 12)	2
-  (2, 13)	3
-  (2, 10)	3
-  (2, 1)	2
   (2, 9)	3
-  (2, 14)	2
-  (2, 7)	3
-  :	:
-  (5, 0)	2
-  (5, 11)	4
-  (5, 4)	2
-  (5, 12)	4
-  (5, 13)	6
-  (5, 10)	6
-  (5, 1)	4
-  (5, 9)	6
-  (5, 14)	2
-  (5, 7)	6
+  (2, 11)	1
+  (2, 8)	1
+  (3, 3)	2
+  (3, 0)	1
+  (3, 9)	1
+  (3, 11)	1
+  (3, 8)	1
+  (4, 6)	2
+  (4, 10)	1
+  (4, 11)	1
+  (4, 8)	1
+  (4, 1)	1
+  (5, 7)	2
+  (5, 10)	1
+  (5, 11)	1
+  (5, 8)	1
+  (5, 1)	1
   (6, 5)	1
   (6, 2)	2
-  (6, 8)	2
-  (6, 6)	2
-  (6, 3)	2
-  (6, 0)	2
-  (6, 11)	4
-  (6, 4)	2
-  (6, 12)	4
-  (6, 13)	7
-  (6, 10)	7
-  (6, 1)	4
-  (6, 9)	6
-  (6, 14)	2
-  (6, 7)	7
-(7, 15)
-Feature names: ['128', '50', 'birthdate', 'confirmpassword', 'confirmusername', 'date', 'firstname', 'id', 'lastname', 'maxlength', 'name', 'password', 'text', 'type', 'username']
+  (6, 11)	1
+  (6, 8)	1
+(7, 13)
+Feature names: ['128', '50', 'birthdate', 'confirmpassword', 'confirmusername', 'date', 'firstname', 'lastname', 'name', 'password', 'text', 'type', 'username']
 
 *************************************************************
 
@@ -319,58 +266,58 @@ Feature names: ['128', '50', 'birthdate', 'confirmpassword', 'confirmusername', 
 [' use an e mail account you will have access to several months from now ', 'why ', ' ', 'type', 'text', 'id', 'emailaddress', 'name', 'emailaddress']
 ['verify your e mail address ', 'type', 'text', 'id', 'emailaddressverify', 'name', 'emailaddressverify']
   (0, 1)	1
-  (0, 28)	1
-  (0, 16)	2
-  (0, 22)	1
-  (0, 46)	1
-  (0, 50)	1
-  (0, 32)	2
-  (0, 20)	1
-  (0, 15)	1
-  (1, 30)	2
-  (1, 29)	1
-  (1, 1)	2
+  (0, 17)	2
+  (0, 44)	1
+  (0, 48)	1
+  (0, 30)	2
+  (0, 21)	1
+  (0, 16)	1
   (1, 28)	2
-  (1, 16)	2
-  (1, 22)	2
-  (1, 46)	2
-  (1, 50)	2
-  (1, 32)	4
-  (1, 20)	1
-  (1, 15)	1
-  (2, 25)	2
-  (2, 30)	2
-  (2, 29)	1
-  (2, 1)	3
-  (2, 28)	3
+  (1, 27)	1
+  (1, 1)	1
+  (1, 44)	1
+  (1, 48)	1
+  (1, 30)	2
+  (2, 24)	2
+  (2, 1)	1
+  (2, 44)	1
+  (2, 48)	1
+  (2, 30)	1
+  (3, 38)	2
+  (3, 31)	1
+  (3, 55)	1
+  (3, 15)	1
+  (3, 18)	1
+  (3, 1)	1
+  (3, 44)	1
   :	:
-  (11, 10)	2
-  (11, 7)	1
-  (11, 36)	2
-  (11, 49)	1
-  (11, 39)	1
-  (11, 9)	1
-  (11, 41)	2
-  (11, 26)	1
-  (11, 40)	2
-  (11, 33)	1
-  (11, 57)	4
+  (10, 52)	1
+  (10, 32)	1
+  (10, 19)	1
+  (10, 29)	1
+  (10, 40)	1
+  (10, 46)	1
+  (10, 2)	1
+  (10, 53)	1
+  (10, 3)	1
+  (10, 26)	1
+  (10, 5)	1
+  (10, 49)	1
+  (10, 22)	1
+  (10, 54)	1
+  (10, 44)	1
+  (10, 48)	1
+  (10, 30)	1
   (11, 14)	2
-  (11, 17)	2
-  (11, 25)	2
-  (11, 30)	2
-  (11, 29)	1
-  (11, 1)	5
-  (11, 28)	8
-  (11, 16)	2
-  (11, 22)	13
-  (11, 46)	12
-  (11, 50)	12
-  (11, 32)	15
-  (11, 20)	1
-  (11, 15)	1
-(12, 58)
-Feature names: ['16', '50', 'access', 'account', 'address', 'an', 'austin', 'birth', 'card', 'city', 'cityortownofbirth', 'digit', 'emailaddress', 'emailaddressverify', 'example', 'first', 'firstname', 'for', 'from', 'front', 'given', 'have', 'id', 'idcardnumber', 'if', 'lastname', 'maiden', 'mail', 'maxlength', 'middle', 'middlename', 'months', 'name', 'nickname', 'now', 'number', 'of', 'on', 'one', 'or', 'otherfirstname', 'otherlastname', 'several', 'studentssna', 'studentssnb', 'studentssnc', 'text', 'the', 'to', 'town', 'type', 'use', 'ut', 'verify', 'why', 'will', 'you', 'your']
+  (11, 4)	1
+  (11, 51)	1
+  (11, 26)	1
+  (11, 55)	1
+  (11, 44)	1
+  (11, 48)	1
+  (11, 30)	1
+(12, 56)
+Feature names: ['16', '50', 'access', 'account', 'address', 'an', 'austin', 'birth', 'card', 'cardnumber', 'city', 'cityortownofbirth', 'digit', 'emailaddress', 'emailaddressverify', 'example', 'first', 'firstname', 'for', 'from', 'front', 'given', 'have', 'if', 'lastname', 'maen', 'mail', 'mdle', 'mdlename', 'months', 'name', 'nickname', 'now', 'number', 'of', 'on', 'one', 'or', 'otherfirstname', 'otherlastname', 'several', 'studentssna', 'studentssnb', 'studentssnc', 'text', 'the', 'to', 'town', 'type', 'use', 'ut', 'verify', 'why', 'will', 'you', 'your']
 
 *************************************************************
 
