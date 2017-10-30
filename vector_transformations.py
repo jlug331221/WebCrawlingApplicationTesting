@@ -110,7 +110,7 @@ def LSA_transformation(tfidf):
 
       LSA[key] = svd.fit_transform(tfidf[key])
 
-      LSA_output.write(str(LSA[key]) + '\n\n')
+      LSA_output.write(str(list(enumerate(LSA[key]))) + '\n\n')
       LSA_output.write('V^T: ' + str(svd.components_) + '\n\n')
 
       LSA_output.write('*************************************************************' + '\n\n')
