@@ -1,0 +1,21 @@
+email:
+  valid:
+    - info@gmail.com
+    -
+  invalid:
+    - a@g
+    - bcd
+
+password:
+  valid:
+    - aadc$$%@@^
+  invalid:
+    - a
+    - 12345678
+
+date_yyyy-mm-dd:
+
+  valid:
+    - 2017-11-01
+  invalid:
+    - 11-01-2017
