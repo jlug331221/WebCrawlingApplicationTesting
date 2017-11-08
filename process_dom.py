@@ -22,7 +22,8 @@ def extract_features(input_element):
     for key, value in input_element_attrs:
       if value and key in attr_list:
         value = re.sub('[^a-zA-Z0-9]', ' ', value.lower())
-        feature_vector += [key, value]
+        value = value.split()
+        feature_vector += value
 
   return feature_vector
 
