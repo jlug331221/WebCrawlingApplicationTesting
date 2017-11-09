@@ -1,6 +1,6 @@
 import os, glob
 from bs4 import BeautifulSoup as BS
-from process_dom import extract_features, find_closest_labels
+from process_dom import extract_features
 import vector_transformations as vt
 
 current_dir = os.path.dirname(__file__)
@@ -41,7 +41,6 @@ def extract_feature_vectors_from_university_forms():
     for form_element in form_elements:
       form_input_elements = form_element.find_all('input')
       for form_input_element in form_input_elements:
-        # print(find_closest_labels(form_input_element))
         feature_vector = extract_features(form_input_element)
         if feature_vector:
           feature_vectors[file_name].append(feature_vector)
