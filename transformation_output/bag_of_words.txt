@@ -1,14 +1,14 @@
 \duke.html
 ['pin', 'userid', 'ay', 'login', 'text']
 ['password', 'password', 'ay', 'password', 'password']
-['first or given name  ', 'text', 'aycreatefn', 'aycreatefn', '30']
-['last or family name  ', 'text', 'aycreateln', 'aycreateln', '30']
-['email address  ', 'text', 'aycreateemail', 'aycreateemail', '120']
-['confirm email address  ', 'text', 'aycreateconfirmemail', 'aycreateconfirmemail']
+['first', 'or', 'given', 'name', ' ', 'text', 'aycreatefn', 'aycreatefn', '30']
+['last', 'or', 'family', 'name', ' ', 'text', 'aycreateln', 'aycreateln', '30']
+['email', 'address', ' ', 'text', 'aycreateemail', 'aycreateemail', '120']
+['confirm', 'email', 'address', ' ', 'text', 'aycreateconfirmemail', 'aycreateconfirmemail']
 ['mm dd yyyy', 'text', 'aycreatedob', 'aycreatedob']
-['zip postal code  ', 'text', 'aycreatepc', 'aycreatepc', '10']
-['password  ', 'password', 'aycreatepassword', 'aycreatepassword']
-['confirm password  ', 'password', 'aycreateconfirmpassword', 'aycreateconfirmpassword']
+['zip postal', 'code', ' ', 'text', 'aycreatepc', 'aycreatepc', '10']
+['password', ' ', 'password', 'aycreatepassword', 'aycreatepassword']
+['confirm', 'password', ' ', 'password', 'aycreateconfirmpassword', 'aycreateconfirmpassword']
   (0, 28)	1
   (0, 21)	1
   (0, 4)	1
@@ -62,38 +62,39 @@ Feature names: ['10', '120', '30', 'address', 'ay', 'aycreateconfirmemail', 'ayc
 *************************************************************
 
 \example_form_from_paper.html
-['text', 'last', 'name', 'last', 'name', '35']
-['password', 'password', 'password', '25']
-['password', 'check', 'password', 'check', 'password', '25']
-['text', 'email', 'email', '35']
+['last', 'name', 'text', 'last', 'name', 'last', 'name', '35']
+['password', 'password', 'password', 'password', '25']
+['verify', 'password', 'password', 'check', 'password', 'check', 'password', '25']
+['email', 'text', 'email', 'email', '35']
   (0, 1)	1
-  (0, 5)	2
-  (0, 4)	2
   (0, 7)	1
+  (0, 5)	3
+  (0, 4)	3
   (1, 0)	1
-  (1, 6)	3
+  (1, 6)	4
   (2, 2)	2
+  (2, 8)	1
   (2, 0)	1
-  (2, 6)	3
-  (3, 3)	2
+  (2, 6)	4
+  (3, 3)	3
   (3, 1)	1
   (3, 7)	1
-(4, 8)
-Feature names: ['25', '35', 'check', 'email', 'last', 'name', 'password', 'text']
+(4, 9)
+Feature names: ['25', '35', 'check', 'email', 'last', 'name', 'password', 'text', 'verify']
 
 *************************************************************
 
 \ncsu.html
 ['pin', 'userid', 'ay', 'login', 'text']
 ['password', 'password', 'ay', 'password', 'password']
-['first or given name  ', 'text', 'aycreatefn', 'aycreatefn', '30']
-['last or family name  ', 'text', 'aycreateln', 'aycreateln', '30']
-['email address  ', 'text', 'aycreateemail', 'aycreateemail', '120']
-['confirm email address  ', 'text', 'aycreateconfirmemail', 'aycreateconfirmemail']
+['first', 'or', 'given', 'name', ' ', 'text', 'aycreatefn', 'aycreatefn', '30']
+['last', 'or', 'family', 'name', ' ', 'text', 'aycreateln', 'aycreateln', '30']
+['email', 'address', ' ', 'text', 'aycreateemail', 'aycreateemail', '120']
+['confirm', 'email', 'address', ' ', 'text', 'aycreateconfirmemail', 'aycreateconfirmemail']
 ['mm dd yyyy', 'text', 'aycreatedob', 'aycreatedob']
-['zip postal code  ', 'text', 'aycreatepc', 'aycreatepc', '10']
-['password  ', 'password', 'aycreatepassword', 'aycreatepassword']
-['confirm password  ', 'password', 'aycreateconfirmpassword', 'aycreateconfirmpassword']
+['zip postal', 'code', ' ', 'text', 'aycreatepc', 'aycreatepc', '10']
+['password', ' ', 'password', 'aycreatepassword', 'aycreatepassword']
+['confirm', 'password', ' ', 'password', 'aycreateconfirmpassword', 'aycreateconfirmpassword']
   (0, 28)	1
   (0, 21)	1
   (0, 4)	1
@@ -147,9 +148,9 @@ Feature names: ['10', '120', '30', 'address', 'ay', 'aycreateconfirmemail', 'ayc
 *************************************************************
 
 \penn_st.html
-['first given name ', 'text', 'firstname', 'firstname']
-['middle name s  ', 'text', 'middlenames', 'middlenames']
-[' last family name ', 'text', 'lastname', 'lastname']
+['first given', 'name ', 'text', 'firstname', 'firstname']
+['middle', 'name s  ', 'text', 'middlenames', 'middlenames']
+[' last family', 'name ', 'text', 'lastname', 'lastname']
   (0, 2)	2
   (0, 9)	1
   (0, 8)	1
@@ -170,8 +171,8 @@ Feature names: ['family', 'first', 'firstname', 'given', 'last', 'lastname', 'md
 *************************************************************
 
 \simple_form.html
-['first name', 'firstname', 'firstname', '45', 'text']
-['last name', 'last', 'name', 'last', 'name', '45', 'text']
+['first', 'name', 'firstname', 'firstname', '45', 'text']
+['last', 'name', 'last', 'name', 'last', 'name', '45', 'text']
   (0, 5)	1
   (0, 0)	1
   (0, 2)	2
@@ -187,13 +188,13 @@ Feature names: ['45', 'first', 'firstname', 'last', 'name', 'text']
 *************************************************************
 
 \ucf.html
-['username', '50', 'username', 'text']
-['confirmusername', '50', 'confirmusername', 'text']
-['password', '128', 'password', 'password']
-['confirmpassword', '128', 'confirmpassword', 'password']
-['firstname', '50', 'firstname', 'text']
-['lastname', '50', 'lastname', 'text']
-['birthdate', 'birthdate', 'date']
+[' ', 'username', '50', 'username', 'text']
+[' ', 'confirmusername', '50', 'confirmusername', 'text']
+[' ', 'password', '128', 'password', 'password']
+[' ', 'confirmpassword', '128', 'confirmpassword', 'password']
+[' ', 'firstname', '50', 'firstname', 'text']
+[' ', 'lastname', '50', 'lastname', 'text']
+[' ', 'birthdate', 'birthdate', 'date']
   (0, 9)	1
   (0, 1)	1
   (0, 10)	2
@@ -219,18 +220,18 @@ Feature names: ['128', '50', 'birthdate', 'confirmpassword', 'confirmusername', 
 *************************************************************
 
 \ut_austin.html
-['first  given  name ', 'text', 'firstname', 'firstname', '50']
-['middle name ', 'text', 'middlename', 'middlename', '50']
+['first', ' given ', 'name ', 'text', 'firstname', 'firstname', '50']
+['middle', 'name ', 'text', 'middlename', 'middlename', '50']
 [' ', 'text', 'lastname', 'lastname', '50']
-[' for example  your nickname  ', 'text', 'otherfirstname', 'otherfirstname', '50']
-[' for example  your maiden name  ', 'text', 'otherlastname', 'otherlastname', '50']
-['city or town of birth ', 'text', 'cityortownofbirth', 'cityortownofbirth']
+[' for', 'example ', 'your', 'nickname  ', 'text', 'otherfirstname', 'otherfirstname', '50']
+[' for', 'example ', 'your', 'maiden', 'name  ', 'text', 'otherlastname', 'otherlastname', '50']
+['city', 'or', 'town', 'of', 'birth ', 'text', 'cityortownofbirth', 'cityortownofbirth']
 [' ', 'text', 'studentssna', 'studentssna', '3']
 [' ', 'text', 'studentssnb', 'studentssnb', '2']
 [' ', 'text', 'studentssnc', 'studentssnc', '4']
-[' the 16 digit number on the front of your ut austin id card  if you have one  ', 'text', 'idcardnumber', 'idcardnumber']
-[' use an e mail account you will have access to several months from now ', 'why ', ' ', 'text', 'emailaddress', 'emailaddress']
-['verify your e mail address ', 'text', 'emailaddressverify', 'emailaddressverify']
+[' the', '16 digit', 'number', 'on', 'the', 'front', 'of', 'your', 'ut', 'austin', 'id', 'card ', 'if', 'you', 'have', 'one  ', 'text', 'idcardnumber', 'idcardnumber']
+[' use', 'an', 'e mail', 'account', 'you', 'will', 'have', 'access', 'to', 'several', 'months', 'from', 'now ', 'why ', ' ', 'text', 'emailaddress', 'emailaddress']
+['verify', 'your', 'e mail', 'address ', 'text', 'emailaddressverify', 'emailaddressverify']
   (0, 1)	1
   (0, 17)	2
   (0, 44)	1

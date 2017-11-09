@@ -52,12 +52,14 @@ def find_closest_labels(input_element, iterations=5):
       labels += sibling.find_all(tag)
 
   if not labels:
-    return find_closest_labels(input_element, iterations - 1)
+    return find_closest_labels(input_element.parent, iterations - 1)
   else:
     content = []
     for label in labels:
       for ss in label.stripped_strings:
-        content.append(re.sub('[^a-zA-Z0-9]', ' ', ss.lower()))
+        ss = ss.split()
+        for s in ss:
+          content.append(re.sub('[^a-zA-Z0-9]', ' ', s.lower()))
 
       if content:
         return content
