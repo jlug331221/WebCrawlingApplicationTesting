@@ -56,6 +56,14 @@ def extract_feature_vectors_from_university_forms():
 def main():
   feature_vectors = extract_feature_vectors_from_university_forms()
 
+  ## gensim transformations
+  bag_of_words = gt.bag_of_words(feature_vectors)
+
+  tfidf = gt.tf_idf(bag_of_words)
+
+  LSA = gt.LSA(tfidf)
+
+  ## sklearn transformations
   # bag_of_words = vt.bag_of_words_transformation(feature_vectors)
   #
   # tfidf = vt.tfidf_transformation(bag_of_words)

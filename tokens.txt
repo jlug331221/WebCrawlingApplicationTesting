@@ -1,0 +1,10 @@
+4
+5	25	2
+3	35	2
+7	check	1
+8	email	1
+0	last	1
+1	name	1
+4	password	2
+2	text	2
+6	verify	1
