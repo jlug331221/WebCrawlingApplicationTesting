@@ -12,9 +12,19 @@ password:
   invalid:
     - a
     - 12345678
+first_name:
+  valid:
+    - justin
+  invalid:
+    - 01_justin
+
+last_name:
+  valid:
+    - lugo
+  invalid:
+    - 02_lugo
 
 date_yyyy-mm-dd:
-
   valid:
     - 2017-11-01
   invalid:
