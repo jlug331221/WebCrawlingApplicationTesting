@@ -1,0 +1,111 @@
+\duke.html
+
+Corpus: MmCorpus(10 documents, 30 features, 51 non-zero entries)
+
+LDA_topics model topics:
+0.175*"aycreateln" + 0.092*" " + 0.092*"name" + 0.092*"30" + 0.092*"or" + 0.092*"text" + 0.092*"family" + 0.092*"last" + 0.008*"password" + 0.008*"ay"
+0.124*"text" + 0.124*"aycreatefn" + 0.065*"given" + 0.065*"first" + 0.065*"login" + 0.065*"userid" + 0.065*"pin" + 0.065*"name" + 0.065*"30" + 0.065*"or"
+0.033*"text" + 0.033*"password" + 0.033*" " + 0.033*"ay" + 0.033*"aycreatedob" + 0.033*"or" + 0.033*"aycreatepc" + 0.033*"aycreateconfirmpassword" + 0.033*"aycreatepassword" + 0.033*"aycreateemail"
+0.131*" " + 0.131*"aycreateconfirmemail" + 0.131*"confirm" + 0.131*"aycreateconfirmpassword" + 0.131*"password" + 0.069*"address" + 0.069*"email" + 0.069*"text" + 0.006*"ay" + 0.006*"aycreatedob"
+0.033*" " + 0.033*"password" + 0.033*"text" + 0.033*"ay" + 0.033*"aycreatedob" + 0.033*"aycreateemail" + 0.033*"aycreatepassword" + 0.033*"or" + 0.033*"aycreatepc" + 0.033*"aycreateconfirmpassword"
+0.469*"password" + 0.162*"aycreatepassword" + 0.085*"ay" + 0.085*" " + 0.008*"text" + 0.008*"aycreatedob" + 0.008*"aycreatepc" + 0.008*"or" + 0.008*"aycreateemail" + 0.008*"aycreateconfirmpassword"
+0.210*"aycreatepc" + 0.110*" " + 0.110*"text" + 0.110*"code" + 0.110*"zip postal" + 0.110*"10" + 0.010*"password" + 0.010*"ay" + 0.010*"aycreatedob" + 0.010*"aycreateemail"
+0.210*"aycreateemail" + 0.110*" " + 0.110*"text" + 0.110*"address" + 0.110*"email" + 0.110*"120" + 0.010*"password" + 0.010*"aycreatepassword" + 0.010*"aycreatedob" + 0.010*"ay"
+0.033*" " + 0.033*"password" + 0.033*"text" + 0.033*"ay" + 0.033*"aycreatepc" + 0.033*"aycreatepassword" + 0.033*"aycreatedob" + 0.033*"email" + 0.033*"mm dd yyyy" + 0.033*"or"
+0.300*"aycreatedob" + 0.157*"text" + 0.157*"mm dd yyyy" + 0.014*" " + 0.014*"password" + 0.014*"or" + 0.014*"ay" + 0.014*"aycreateemail" + 0.014*"email" + 0.014*"aycreateconfirmpassword"
+
+
+*************************************************************
+
+\example_form_from_paper.html
+
+Corpus: MmCorpus(4 documents, 9 features, 13 non-zero entries)
+
+LDA_topics model topics:
+0.317*"last" + 0.317*"name" + 0.122*"text" + 0.122*"35" + 0.024*"password" + 0.024*"25" + 0.024*"email" + 0.024*"check" + 0.024*"verify"
+0.448*"email" + 0.172*"text" + 0.172*"35" + 0.035*"password" + 0.034*"25" + 0.034*"last" + 0.034*"check" + 0.034*"verify" + 0.034*"name"
+0.111*"password" + 0.111*"35" + 0.111*"text" + 0.111*"25" + 0.111*"verify" + 0.111*"check" + 0.111*"email" + 0.111*"name" + 0.111*"last"
+0.541*"password" + 0.148*"check" + 0.148*"25" + 0.082*"verify" + 0.016*"email" + 0.016*"name" + 0.016*"35" + 0.016*"text" + 0.016*"last"
+
+
+*************************************************************
+
+\ncsu.html
+
+Corpus: MmCorpus(10 documents, 30 features, 51 non-zero entries)
+
+LDA_topics model topics:
+0.033*"password" + 0.033*"text" + 0.033*" " + 0.033*"aycreatedob" + 0.033*"aycreatepassword" + 0.033*"aycreateconfirmpassword" + 0.033*"aycreateconfirmemail" + 0.033*"ay" + 0.033*"aycreateemail" + 0.033*"email"
+0.175*"aycreatefn" + 0.092*"text" + 0.092*" " + 0.092*"30" + 0.092*"name" + 0.092*"or" + 0.092*"first" + 0.092*"given" + 0.008*"password" + 0.008*"aycreatedob"
+0.163*"text" + 0.111*"aycreateemail" + 0.111*"aycreatedob" + 0.058*"120" + 0.058*"userid" + 0.058*"login" + 0.058*"pin" + 0.058*"mm dd yyyy" + 0.058*"address" + 0.058*"email"
+0.124*" " + 0.124*"aycreateln" + 0.124*"aycreatepassword" + 0.124*"password" + 0.065*"last" + 0.065*"family" + 0.065*"name" + 0.065*"or" + 0.065*"30" + 0.065*"text"
+0.033*"password" + 0.033*"text" + 0.033*" " + 0.033*"aycreatedob" + 0.033*"ay" + 0.033*"aycreatepc" + 0.033*"aycreateconfirmpassword" + 0.033*"email" + 0.033*"aycreateconfirmemail" + 0.033*"address"
+0.033*"password" + 0.033*" " + 0.033*"text" + 0.033*"address" + 0.033*"aycreateconfirmpassword" + 0.033*"email" + 0.033*"mm dd yyyy" + 0.033*"aycreatedob" + 0.033*"aycreatepassword" + 0.033*"ay"
+0.131*" " + 0.131*"confirm" + 0.131*"aycreateconfirmemail" + 0.131*"aycreateconfirmpassword" + 0.131*"password" + 0.069*"email" + 0.069*"address" + 0.069*"text" + 0.006*"ay" + 0.006*"aycreatedob"
+0.273*"password" + 0.140*"aycreatepc" + 0.073*"ay" + 0.073*"code" + 0.073*"zip postal" + 0.073*"10" + 0.073*"text" + 0.073*" " + 0.007*"aycreatedob" + 0.007*"email"
+0.033*"text" + 0.033*" " + 0.033*"password" + 0.033*"aycreatedob" + 0.033*"ay" + 0.033*"mm dd yyyy" + 0.033*"aycreatepc" + 0.033*"aycreatepassword" + 0.033*"aycreateconfirmemail" + 0.033*"login"
+0.033*"password" + 0.033*"text" + 0.033*" " + 0.033*"aycreatedob" + 0.033*"aycreatepassword" + 0.033*"ay" + 0.033*"email" + 0.033*"address" + 0.033*"pin" + 0.033*"confirm"
+
+
+*************************************************************
+
+\penn_st.html
+
+Corpus: MmCorpus(3 documents, 9 features, 12 non-zero entries)
+
+LDA_topics model topics:
+0.291*"middlenames" + 0.167*"text" + 0.167*"middle" + 0.166*"name s  " + 0.042*"name " + 0.042*"firstname" + 0.042*"lastname" + 0.042*" last family" + 0.042*"first given"
+0.291*"firstname" + 0.167*"text" + 0.167*"name " + 0.166*"first given" + 0.042*"middlenames" + 0.042*"lastname" + 0.042*"name s  " + 0.042*" last family" + 0.042*"middle"
+0.291*"lastname" + 0.167*"text" + 0.167*"name " + 0.166*" last family" + 0.042*"middlenames" + 0.042*"firstname" + 0.042*"name s  " + 0.042*"first given" + 0.042*"middle"
+
+
+*************************************************************
+
+\simple_form.html
+
+Corpus: MmCorpus(2 documents, 6 features, 9 non-zero entries)
+
+LDA_topics model topics:
+0.323*"name" + 0.314*"last" + 0.136*"text" + 0.136*"45" + 0.046*"firstname" + 0.046*"first"
+0.280*"firstname" + 0.168*"first" + 0.168*"45" + 0.168*"text" + 0.159*"name" + 0.057*"last"
+
+
+*************************************************************
+
+\ucf.html
+
+Corpus: MmCorpus(7 documents, 12 features, 26 non-zero entries)
+
+LDA_topics model topics:
+0.083*" " + 0.083*"50" + 0.083*"text" + 0.083*"password" + 0.083*"birthdate" + 0.083*"username" + 0.083*"128" + 0.083*"confirmpassword" + 0.083*"firstname" + 0.083*"lastname"
+0.083*" " + 0.083*"text" + 0.083*"50" + 0.083*"password" + 0.083*"username" + 0.083*"confirmpassword" + 0.083*"lastname" + 0.083*"firstname" + 0.083*"128" + 0.083*"birthdate"
+0.188*"50" + 0.188*"text" + 0.188*" " + 0.128*"lastname" + 0.128*"firstname" + 0.128*"username" + 0.009*"password" + 0.009*"128" + 0.009*"confirmpassword" + 0.009*"birthdate"
+0.319*"confirmusername" + 0.170*" " + 0.170*"50" + 0.170*"text" + 0.021*"password" + 0.021*"128" + 0.021*"firstname" + 0.021*"confirmpassword" + 0.021*"birthdate" + 0.021*"username"
+0.354*"password" + 0.183*" " + 0.183*"confirmpassword" + 0.183*"128" + 0.012*"text" + 0.012*"50" + 0.012*"username" + 0.012*"birthdate" + 0.012*"firstname" + 0.012*"confirmusername"
+0.083*" " + 0.083*"text" + 0.083*"50" + 0.083*"password" + 0.083*"firstname" + 0.083*"lastname" + 0.083*"username" + 0.083*"confirmpassword" + 0.083*"128" + 0.083*"birthdate"
+0.375*"birthdate" + 0.200*" " + 0.200*"date" + 0.025*"50" + 0.025*"text" + 0.025*"password" + 0.025*"username" + 0.025*"firstname" + 0.025*"confirmusername" + 0.025*"128"
+
+
+*************************************************************
+
+\ut_austin.html
+
+Corpus: MmCorpus(12 documents, 61 features, 90 non-zero entries)
+
+LDA_topics model topics:
+0.016*"text" + 0.016*"50" + 0.016*" " + 0.016*"your" + 0.016*"lastname" + 0.016*"studentssna" + 0.016*"firstname" + 0.016*"studentssnc" + 0.016*"studentssnb" + 0.016*"middlename"
+0.016*"text" + 0.016*" " + 0.016*"50" + 0.016*"your" + 0.016*"lastname" + 0.016*"studentssnc" + 0.016*"studentssnb" + 0.016*"studentssna" + 0.016*"middlename" + 0.016*"otherlastname"
+0.016*"text" + 0.016*" " + 0.016*"50" + 0.016*"studentssnc" + 0.016*"lastname" + 0.016*"studentssna" + 0.016*"your" + 0.016*"otherfirstname" + 0.016*"firstname" + 0.016*"cityortownofbirth"
+0.074*" " + 0.074*"emailaddress" + 0.074*"lastname" + 0.074*"text" + 0.039*"account" + 0.039*"why " + 0.039*"now " + 0.039*"access" + 0.039*"an" + 0.039*"months"
+0.114*"text" + 0.077*"cityortownofbirth" + 0.077*"otherlastname" + 0.077*"studentssna" + 0.040*"maiden" + 0.040*"name  " + 0.040*"or" + 0.040*"town" + 0.040*"birth " + 0.040*"city"
+0.016*"text" + 0.016*" " + 0.016*"50" + 0.016*"your" + 0.016*"lastname" + 0.016*"studentssnc" + 0.016*"studentssna" + 0.016*"firstname" + 0.016*"studentssnb" + 0.016*" for"
+0.016*"text" + 0.016*"50" + 0.016*" " + 0.016*"studentssna" + 0.016*"lastname" + 0.016*"your" + 0.016*"studentssnc" + 0.016*"middlename" + 0.016*"firstname" + 0.016*"studentssnb"
+0.087*"idcardnumber" + 0.045*"of" + 0.045*"your" + 0.045*"you" + 0.045*"have" + 0.045*"number" + 0.045*"ut" + 0.045*"16 digit" + 0.045*"card " + 0.045*" the"
+0.122*"text" + 0.122*"emailaddressverify" + 0.122*"studentssnb" + 0.063*" " + 0.063*"e mail" + 0.063*"address " + 0.063*"verify" + 0.063*"2" + 0.063*"your" + 0.005*"50"
+0.016*"text" + 0.016*" " + 0.016*"50" + 0.016*"middlename" + 0.016*"studentssnb" + 0.016*"your" + 0.016*"emailaddressverify" + 0.016*"studentssnc" + 0.016*"firstname" + 0.016*"lastname"
+0.159*"otherfirstname" + 0.083*"50" + 0.083*"your" + 0.083*" for" + 0.083*"example " + 0.083*"text" + 0.083*"nickname  " + 0.006*" " + 0.006*"studentssnc" + 0.006*"lastname"
+0.134*"text" + 0.090*"50" + 0.090*"name " + 0.090*"firstname" + 0.090*"middlename" + 0.090*"studentssnc" + 0.047*"first" + 0.047*" given " + 0.047*"middle" + 0.047*"4"
+
+
+*************************************************************
+
