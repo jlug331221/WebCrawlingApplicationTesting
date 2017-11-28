@@ -1,31 +1,28 @@
 10
-10	 	7
-27	10	1
-19	120	1
-12	30	2
-17	address	2
-2	ay	2
-21	aycreateconfirmemail	1
-29	aycreateconfirmpassword	1
-23	aycreatedob	1
-18	aycreateemail	1
-11	aycreatefn	1
-15	aycreateln	1
-28	aycreatepassword	1
-26	aycreatepc	1
-25	code	1
-20	confirm	2
-16	email	2
-14	family	1
-6	first	1
-8	given	1
-13	last	1
-3	login	1
-22	mm dd yyyy	1
-9	name	2
-7	or	2
-5	password	3
+24	10	1
+16	120	1
+9	30	2
+14	address	2
+18	aycreateconfirmemail	1
+26	aycreateconfirmpassword	1
+20	aycreatedob	1
+15	aycreateemail	1
+8	aycreatefn	1
+12	aycreateln	1
+25	aycreatepassword	1
+23	aycreatepc	1
+22	code	1
+17	confirm	2
+13	email	2
+11	family	1
+5	first	1
+6	given	1
+10	last	1
+2	login	1
+19	mm dd yyyy	1
+7	name	2
+4	password	3
 0	pin	1
-4	text	7
+3	text	7
 1	userid	1
-24	zip postal	1
+21	zip postal	1

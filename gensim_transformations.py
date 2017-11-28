@@ -17,20 +17,37 @@ def bag_of_words(feature_vectors):
     for key in feature_vectors.keys():
       BoW[key] = []
 
-      dictionary = corpora.Dictionary(feature_vectors.get(key))
+      # common words to remove
+      stop_list = set('your a the is and or in be to of for not on with as by ay'.split())
+      stop_list.add(' ')
+
+
+      preprocessed_feature_vectors = []
+
+      for feature_vector in feature_vectors.get(key):
+        removed_stopwords = []
+        for word in feature_vector:
+          if word not in stop_list:
+            removed_stopwords.append(word)
+        preprocessed_feature_vectors.append(removed_stopwords)
+
+      # dictionary = corpora.Dictionary(feature_vectors.get(key))
+      dictionary = corpora.Dictionary(preprocessed_feature_vectors)
+
       # store the dictionary for later usage in LSI transformation
       dictionary.save_as_text(current_dir + '/gensim_transformation_output/dictionaries/' + key +
                               '.txt')
 
       BoW_output.write(key + ' has the following feature vectors:\n')
 
-      for feature_vector in feature_vectors.get(key):
+      for feature_vector in preprocessed_feature_vectors:
         BoW_output.write(str(feature_vector) + '\n')
 
       BoW_output.write('\nThe tokenized dictionary (unique words) is as follows:\n')
       BoW_output.write(str(dictionary.token2id) + '\n\n')
 
-      BoW[key] = [dictionary.doc2bow(feature_vector) for feature_vector in feature_vectors.get(key)]
+      BoW[key] = [dictionary.doc2bow(feature_vector)
+                  for feature_vector in preprocessed_feature_vectors]
 
       # store corpus for later use
       corpora.MmCorpus.serialize(current_dir + '/gensim_transformation_output/serialized_corpus/' +
