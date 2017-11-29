@@ -13,9 +13,14 @@ def find_similarities(vector, feature_vectors):
 # predict label vector from labeld vectors using cosine similariy
 #
 # vector: vector to be predicted
-# labeld_vectors: is a set of vectors that have been labeled for similarity comparision
+# labeled_vectors: is a set of vectors that have been labeled for similarity comparision
+#
+# return: most similarity vector. From this most similarity we will figure out the class label.
 
 def predict(vector, labeled_vectors):
+
+  if labeled_vectors == None or len(labeled_vectors) < 1:
+    return vector
 
   max = -2
   most_similarity = None
