@@ -64,7 +64,7 @@ def main():
   LSA = gt.LSA(tfidf)
 
   LDA_models = gt.LDA(tfidf)
-  print('Done')
+  print('\nDone')
 
   ## sklearn transformations
   # bag_of_words = vt.bag_of_words_transformation(feature_vectors)

@@ -44,6 +44,35 @@ Bag of words counts for each feature vector:
 
 *************************************************************
 
+\georgetown.html has the following feature vectors:
+['pin', 'userid', 'login', 'text']
+['password', 'password', 'password', 'password']
+['first', 'given', 'name', 'text', 'aycreatefn', 'aycreatefn', '30']
+['last', 'family', 'name', 'text', 'aycreateln', 'aycreateln', '30']
+['email', 'address', 'text', 'aycreateemail', 'aycreateemail', '120']
+['confirm', 'email', 'address', 'text', 'aycreateconfirmemail', 'aycreateconfirmemail']
+['mm dd yyyy', 'text', 'aycreatedob', 'aycreatedob']
+['zip postal', 'code', 'text', 'aycreatepc', 'aycreatepc', '10']
+['password', 'password', 'aycreatepassword', 'aycreatepassword']
+['confirm', 'password', 'password', 'aycreateconfirmpassword', 'aycreateconfirmpassword']
+
+The tokenized dictionary (unique words) is as follows:
+{'pin': 0, 'userid': 1, 'login': 2, 'text': 3, 'password': 4, 'first': 5, 'given': 6, 'name': 7, 'aycreatefn': 8, '30': 9, 'last': 10, 'family': 11, 'aycreateln': 12, 'email': 13, 'address': 14, 'aycreateemail': 15, '120': 16, 'confirm': 17, 'aycreateconfirmemail': 18, 'mm dd yyyy': 19, 'aycreatedob': 20, 'zip postal': 21, 'code': 22, 'aycreatepc': 23, '10': 24, 'aycreatepassword': 25, 'aycreateconfirmpassword': 26}
+
+Bag of words counts for each feature vector:
+[(0, 1), (1, 1), (2, 1), (3, 1)]
+[(4, 4)]
+[(3, 1), (5, 1), (6, 1), (7, 1), (8, 2), (9, 1)]
+[(3, 1), (7, 1), (9, 1), (10, 1), (11, 1), (12, 2)]
+[(3, 1), (13, 1), (14, 1), (15, 2), (16, 1)]
+[(3, 1), (13, 1), (14, 1), (17, 1), (18, 2)]
+[(3, 1), (19, 1), (20, 2)]
+[(3, 1), (21, 1), (22, 1), (23, 2), (24, 1)]
+[(4, 2), (25, 2)]
+[(4, 2), (17, 1), (26, 2)]
+
+*************************************************************
+
 \ncsu.html has the following feature vectors:
 ['pin', 'userid', 'login', 'text']
 ['password', 'password', 'password', 'password']
@@ -121,39 +150,6 @@ Bag of words counts for each feature vector:
 [(1, 1), (2, 1), (7, 2)]
 [(1, 1), (2, 1), (8, 2)]
 [(9, 2), (10, 1)]
-
-*************************************************************
-
-\ut_austin.html has the following feature vectors:
-['first', ' given ', 'name ', 'text', 'firstname', 'firstname', '50']
-['middle', 'name ', 'text', 'middlename', 'middlename', '50']
-['text', 'lastname', 'lastname', '50']
-[' for', 'example ', 'nickname  ', 'text', 'otherfirstname', 'otherfirstname', '50']
-[' for', 'example ', 'maiden', 'name  ', 'text', 'otherlastname', 'otherlastname', '50']
-['city', 'town', 'birth ', 'text', 'cityortownofbirth', 'cityortownofbirth']
-['text', 'studentssna', 'studentssna', '3']
-['text', 'studentssnb', 'studentssnb', '2']
-['text', 'studentssnc', 'studentssnc', '4']
-[' the', '16 digit', 'number', 'front', 'ut', 'austin', 'id', 'card ', 'if', 'you', 'have', 'one  ', 'text', 'idcardnumber', 'idcardnumber']
-[' use', 'an', 'e mail', 'account', 'you', 'will', 'have', 'access', 'several', 'months', 'from', 'now ', 'why ', 'text', 'emailaddress', 'emailaddress']
-['verify', 'e mail', 'address ', 'text', 'emailaddressverify', 'emailaddressverify']
-
-The tokenized dictionary (unique words) is as follows:
-{'first': 0, ' given ': 1, 'name ': 2, 'text': 3, 'firstname': 4, '50': 5, 'middle': 6, 'middlename': 7, 'lastname': 8, ' for': 9, 'example ': 10, 'nickname  ': 11, 'otherfirstname': 12, 'maiden': 13, 'name  ': 14, 'otherlastname': 15, 'city': 16, 'town': 17, 'birth ': 18, 'cityortownofbirth': 19, 'studentssna': 20, '3': 21, 'studentssnb': 22, '2': 23, 'studentssnc': 24, '4': 25, ' the': 26, '16 digit': 27, 'number': 28, 'front': 29, 'ut': 30, 'austin': 31, 'id': 32, 'card ': 33, 'if': 34, 'you': 35, 'have': 36, 'one  ': 37, 'idcardnumber': 38, ' use': 39, 'an': 40, 'e mail': 41, 'account': 42, 'will': 43, 'access': 44, 'several': 45, 'months': 46, 'from': 47, 'now ': 48, 'why ': 49, 'emailaddress': 50, 'verify': 51, 'address ': 52, 'emailaddressverify': 53}
-
-Bag of words counts for each feature vector:
-[(0, 1), (1, 1), (2, 1), (3, 1), (4, 2), (5, 1)]
-[(2, 1), (3, 1), (5, 1), (6, 1), (7, 2)]
-[(3, 1), (5, 1), (8, 2)]
-[(3, 1), (5, 1), (9, 1), (10, 1), (11, 1), (12, 2)]
-[(3, 1), (5, 1), (9, 1), (10, 1), (13, 1), (14, 1), (15, 2)]
-[(3, 1), (16, 1), (17, 1), (18, 1), (19, 2)]
-[(3, 1), (20, 2), (21, 1)]
-[(3, 1), (22, 2), (23, 1)]
-[(3, 1), (24, 2), (25, 1)]
-[(3, 1), (26, 1), (27, 1), (28, 1), (29, 1), (30, 1), (31, 1), (32, 1), (33, 1), (34, 1), (35, 1), (36, 1), (37, 1), (38, 2)]
-[(3, 1), (35, 1), (36, 1), (39, 1), (40, 1), (41, 1), (42, 1), (43, 1), (44, 1), (45, 1), (46, 1), (47, 1), (48, 1), (49, 1), (50, 2)]
-[(3, 1), (41, 1), (51, 1), (52, 1), (53, 2)]
 
 *************************************************************
 

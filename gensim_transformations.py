@@ -1,8 +1,13 @@
 import os
 from gensim import corpora, models, similarities, matutils
 import pyLDAvis.gensim
+import numpy.random as np_rand
+import random as rand
 
 current_dir = os.path.dirname(__file__)
+
+# Utilizing a fixed seed for deterministic results; '3' seems to work best
+FIXED_SEED = 6
 
 '''
 # Apply bag of words transformation on feature_vectors and output transformation to
@@ -20,7 +25,6 @@ def bag_of_words(feature_vectors):
       # common words to remove
       stop_list = set('your a the is and or in be to of for not on with as by ay'.split())
       stop_list.add(' ')
-
 
       preprocessed_feature_vectors = []
 
@@ -99,6 +103,9 @@ def tf_idf(bag_of_words):
 # Return LSA transformations.
 '''
 def LSA(tfidf):
+  np_rand.seed(FIXED_SEED)
+  rand.seed(FIXED_SEED)
+
   LSA = dict()
 
   with open(current_dir + '/gensim_transformation_output/LSA.txt', 'w') as LSA_output:
@@ -147,6 +154,9 @@ def LSA(tfidf):
 # Return LDA transformations.
 '''
 def LDA(tfidf, visualize=False):
+  np_rand.seed(FIXED_SEED)
+  rand.seed(FIXED_SEED)
+
   LDA_models = dict()
 
   with open(current_dir + '/gensim_transformation_output/LDA.txt', 'w') as LDA_output:
@@ -156,12 +166,12 @@ def LDA(tfidf, visualize=False):
       dictionary = corpora.Dictionary.load_from_text(current_dir +
                       '/gensim_transformation_output/dictionaries/' + key + '.txt')
 
+      tokens2id = dictionary.token2id
+
       corpus = corpora.MmCorpus(current_dir + '/gensim_transformation_output/serialized_corpus' +
                                 key + '.mm')
 
       # initialize LDA_topics model
-      # lda_model = models.LdaModel(corpus, num_topics=len(tfidf[key].corpus),
-      #                             id2word=dictionary, passes=10)
       lda_model = models.LdaModel(tfidf[key].corpus, num_topics=len(tfidf[key].corpus),
                                   id2word=dictionary, passes=10)
 
@@ -176,10 +186,23 @@ def LDA(tfidf, visualize=False):
         pyLDAvis.save_html(LDA_vis_data, current_dir + '/visualizations/LDA_topics/' + key)
 
       LDA_output.write('Corpus: ' + str(corpus) + '\n\n')
-      LDA_output.write('LDA_topics model topics:\n')
+
+      LDA_output.write('LDA_model topic probabilities:\n')
       for i in range(len(tfidf[key].corpus)):
         LDA_output.write(str(lda_model.print_topic(i)) + '\n')
-      # LDA_output.write(str(lda_model.show_topics()) + '\n')
+
+      LDA_output.write('\n** LDA_model top topic probability: **\n')
+      for i in range(len(tfidf[key].corpus)):
+        top_topic_terms = lda_model.get_topic_terms(i, topn=1)
+
+        for x in top_topic_terms:
+          top_topic_terms = top_topic_terms,\
+                            list(tokens2id.keys())[list(tokens2id.values()).index(x[0])]
+
+        LDA_output.write(str(top_topic_terms) + '\n')
+
       LDA_output.write('\n\n*************************************************************' + '\n\n')
+
+      lda_model = None
 
   return LDA_models
