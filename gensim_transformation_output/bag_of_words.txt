@@ -1,0 +1,155 @@
+\duke.html has the following feature vectors:
+['pin', 'userid', 'login', 'text']
+['password', 'password', 'password', 'password']
+['first', 'given', 'name', 'text', 'aycreatefn', 'aycreatefn', '30']
+['last', 'family', 'name', 'text', 'aycreateln', 'aycreateln', '30']
+['email', 'address', 'text', 'aycreateemail', 'aycreateemail', '120']
+['confirm', 'email', 'address', 'text', 'aycreateconfirmemail', 'aycreateconfirmemail']
+['mm dd yyyy', 'text', 'aycreatedob', 'aycreatedob']
+['zip postal', 'code', 'text', 'aycreatepc', 'aycreatepc', '10']
+['password', 'password', 'aycreatepassword', 'aycreatepassword']
+['confirm', 'password', 'password', 'aycreateconfirmpassword', 'aycreateconfirmpassword']
+
+The tokenized dictionary (unique words) is as follows:
+{'pin': 0, 'userid': 1, 'login': 2, 'text': 3, 'password': 4, 'first': 5, 'given': 6, 'name': 7, 'aycreatefn': 8, '30': 9, 'last': 10, 'family': 11, 'aycreateln': 12, 'email': 13, 'address': 14, 'aycreateemail': 15, '120': 16, 'confirm': 17, 'aycreateconfirmemail': 18, 'mm dd yyyy': 19, 'aycreatedob': 20, 'zip postal': 21, 'code': 22, 'aycreatepc': 23, '10': 24, 'aycreatepassword': 25, 'aycreateconfirmpassword': 26}
+
+Bag of words counts for each feature vector:
+[(0, 1), (1, 1), (2, 1), (3, 1)]
+[(4, 4)]
+[(3, 1), (5, 1), (6, 1), (7, 1), (8, 2), (9, 1)]
+[(3, 1), (7, 1), (9, 1), (10, 1), (11, 1), (12, 2)]
+[(3, 1), (13, 1), (14, 1), (15, 2), (16, 1)]
+[(3, 1), (13, 1), (14, 1), (17, 1), (18, 2)]
+[(3, 1), (19, 1), (20, 2)]
+[(3, 1), (21, 1), (22, 1), (23, 2), (24, 1)]
+[(4, 2), (25, 2)]
+[(4, 2), (17, 1), (26, 2)]
+
+*************************************************************
+
+\example_form_from_paper.html has the following feature vectors:
+['last', 'name', 'text', 'last', 'name', 'last', 'name', '35']
+['email', 'text', 'email', 'email', '35']
+['password', 'password', 'password', 'password', '25']
+['verify', 'password', 'password', 'check', 'password', 'check', 'password', '25']
+
+The tokenized dictionary (unique words) is as follows:
+{'last': 0, 'name': 1, 'text': 2, '35': 3, 'email': 4, 'password': 5, '25': 6, 'verify': 7, 'check': 8}
+
+Bag of words counts for each feature vector:
+[(0, 3), (1, 3), (2, 1), (3, 1)]
+[(2, 1), (3, 1), (4, 3)]
+[(5, 4), (6, 1)]
+[(5, 4), (6, 1), (7, 1), (8, 2)]
+
+*************************************************************
+
+\georgetown.html has the following feature vectors:
+['pin', 'userid', 'login', 'text']
+['password', 'password', 'password', 'password']
+['first', 'given', 'name', 'text', 'aycreatefn', 'aycreatefn', '30']
+['last', 'family', 'name', 'text', 'aycreateln', 'aycreateln', '30']
+['email', 'address', 'text', 'aycreateemail', 'aycreateemail', '120']
+['confirm', 'email', 'address', 'text', 'aycreateconfirmemail', 'aycreateconfirmemail']
+['mm dd yyyy', 'text', 'aycreatedob', 'aycreatedob']
+['zip postal', 'code', 'text', 'aycreatepc', 'aycreatepc', '10']
+['password', 'password', 'aycreatepassword', 'aycreatepassword']
+['confirm', 'password', 'password', 'aycreateconfirmpassword', 'aycreateconfirmpassword']
+
+The tokenized dictionary (unique words) is as follows:
+{'pin': 0, 'userid': 1, 'login': 2, 'text': 3, 'password': 4, 'first': 5, 'given': 6, 'name': 7, 'aycreatefn': 8, '30': 9, 'last': 10, 'family': 11, 'aycreateln': 12, 'email': 13, 'address': 14, 'aycreateemail': 15, '120': 16, 'confirm': 17, 'aycreateconfirmemail': 18, 'mm dd yyyy': 19, 'aycreatedob': 20, 'zip postal': 21, 'code': 22, 'aycreatepc': 23, '10': 24, 'aycreatepassword': 25, 'aycreateconfirmpassword': 26}
+
+Bag of words counts for each feature vector:
+[(0, 1), (1, 1), (2, 1), (3, 1)]
+[(4, 4)]
+[(3, 1), (5, 1), (6, 1), (7, 1), (8, 2), (9, 1)]
+[(3, 1), (7, 1), (9, 1), (10, 1), (11, 1), (12, 2)]
+[(3, 1), (13, 1), (14, 1), (15, 2), (16, 1)]
+[(3, 1), (13, 1), (14, 1), (17, 1), (18, 2)]
+[(3, 1), (19, 1), (20, 2)]
+[(3, 1), (21, 1), (22, 1), (23, 2), (24, 1)]
+[(4, 2), (25, 2)]
+[(4, 2), (17, 1), (26, 2)]
+
+*************************************************************
+
+\ncsu.html has the following feature vectors:
+['pin', 'userid', 'login', 'text']
+['password', 'password', 'password', 'password']
+['first', 'given', 'name', 'text', 'aycreatefn', 'aycreatefn', '30']
+['last', 'family', 'name', 'text', 'aycreateln', 'aycreateln', '30']
+['email', 'address', 'text', 'aycreateemail', 'aycreateemail', '120']
+['confirm', 'email', 'address', 'text', 'aycreateconfirmemail', 'aycreateconfirmemail']
+['mm dd yyyy', 'text', 'aycreatedob', 'aycreatedob']
+['zip postal', 'code', 'text', 'aycreatepc', 'aycreatepc', '10']
+['password', 'password', 'aycreatepassword', 'aycreatepassword']
+['confirm', 'password', 'password', 'aycreateconfirmpassword', 'aycreateconfirmpassword']
+
+The tokenized dictionary (unique words) is as follows:
+{'pin': 0, 'userid': 1, 'login': 2, 'text': 3, 'password': 4, 'first': 5, 'given': 6, 'name': 7, 'aycreatefn': 8, '30': 9, 'last': 10, 'family': 11, 'aycreateln': 12, 'email': 13, 'address': 14, 'aycreateemail': 15, '120': 16, 'confirm': 17, 'aycreateconfirmemail': 18, 'mm dd yyyy': 19, 'aycreatedob': 20, 'zip postal': 21, 'code': 22, 'aycreatepc': 23, '10': 24, 'aycreatepassword': 25, 'aycreateconfirmpassword': 26}
+
+Bag of words counts for each feature vector:
+[(0, 1), (1, 1), (2, 1), (3, 1)]
+[(4, 4)]
+[(3, 1), (5, 1), (6, 1), (7, 1), (8, 2), (9, 1)]
+[(3, 1), (7, 1), (9, 1), (10, 1), (11, 1), (12, 2)]
+[(3, 1), (13, 1), (14, 1), (15, 2), (16, 1)]
+[(3, 1), (13, 1), (14, 1), (17, 1), (18, 2)]
+[(3, 1), (19, 1), (20, 2)]
+[(3, 1), (21, 1), (22, 1), (23, 2), (24, 1)]
+[(4, 2), (25, 2)]
+[(4, 2), (17, 1), (26, 2)]
+
+*************************************************************
+
+\penn_st.html has the following feature vectors:
+['first given', 'name ', 'text', 'firstname', 'firstname']
+['middle', 'name s  ', 'text', 'middlenames', 'middlenames']
+[' last family', 'name ', 'text', 'lastname', 'lastname']
+
+The tokenized dictionary (unique words) is as follows:
+{'first given': 0, 'name ': 1, 'text': 2, 'firstname': 3, 'middle': 4, 'name s  ': 5, 'middlenames': 6, ' last family': 7, 'lastname': 8}
+
+Bag of words counts for each feature vector:
+[(0, 1), (1, 1), (2, 1), (3, 2)]
+[(2, 1), (4, 1), (5, 1), (6, 2)]
+[(1, 1), (2, 1), (7, 1), (8, 2)]
+
+*************************************************************
+
+\simple_form.html has the following feature vectors:
+['first', 'name', 'firstname', 'firstname', '45', 'text']
+['last', 'name', 'last', 'name', 'last', 'name', '45', 'text']
+
+The tokenized dictionary (unique words) is as follows:
+{'first': 0, 'name': 1, 'firstname': 2, '45': 3, 'text': 4, 'last': 5}
+
+Bag of words counts for each feature vector:
+[(0, 1), (1, 1), (2, 2), (3, 1), (4, 1)]
+[(1, 3), (3, 1), (4, 1), (5, 3)]
+
+*************************************************************
+
+\ucf.html has the following feature vectors:
+['username', '50', 'username', 'text']
+['confirmusername', '50', 'confirmusername', 'text']
+['password', '128', 'password', 'password']
+['confirmpassword', '128', 'confirmpassword', 'password']
+['firstname', '50', 'firstname', 'text']
+['lastname', '50', 'lastname', 'text']
+['birthdate', 'birthdate', 'date']
+
+The tokenized dictionary (unique words) is as follows:
+{'username': 0, '50': 1, 'text': 2, 'confirmusername': 3, 'password': 4, '128': 5, 'confirmpassword': 6, 'firstname': 7, 'lastname': 8, 'birthdate': 9, 'date': 10}
+
+Bag of words counts for each feature vector:
+[(0, 2), (1, 1), (2, 1)]
+[(1, 1), (2, 1), (3, 2)]
+[(4, 3), (5, 1)]
+[(4, 1), (5, 1), (6, 2)]
+[(1, 1), (2, 1), (7, 2)]
+[(1, 1), (2, 1), (8, 2)]
+[(9, 2), (10, 1)]
+
+*************************************************************
+

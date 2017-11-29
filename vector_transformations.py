@@ -8,7 +8,7 @@ current_dir = os.path.dirname(__file__)
 #
 # Return bag of words transformation on feature_vectors (for each document).
 #
-# Output is written to 'transformation_output/bag_of_words.txt'.
+# Output is written to 'sklearn_transformation_output/bag_of_words.txt'.
 # 
 # bag of words := count of significant words in each feature vector.
 # Each bag of words transformation produces a document-term matrix
@@ -41,7 +41,7 @@ def bag_of_words_transformation(feature_vectors):
   bag_of_words = dict()
   count_vectorizer = CountVectorizer()
 
-  with open(current_dir + '/transformation_output/bag_of_words.txt', 'w') as BoW_output:
+  with open(current_dir + '/sklearn_transformation_output/bag_of_words.txt', 'w') as BoW_output:
     for key in feature_vectors.keys():
       bag_of_words[key] = []
       BoW_output.write(key + '\n')
@@ -91,7 +91,7 @@ def tfidf_transformation(bag_of_words):
   tfidf = dict()
   tfidf_transformer = TfidfTransformer()
 
-  with open(current_dir + '/transformation_output/tfidf.txt', 'w') as tfidf_output:
+  with open(current_dir + '/sklearn_transformation_output/tfidf.txt', 'w') as tfidf_output:
     for key in bag_of_words.keys():
       tfidf[key] = []
       tfidf_output.write(key + '\n')
@@ -115,7 +115,7 @@ def LSA_transformation(tfidf):
   LSA = dict()
   svd = TruncatedSVD()
 
-  with open(current_dir + '/transformation_output/LSA.txt', 'w') as LSA_output:
+  with open(current_dir + '/sklearn_transformation_output/LSA.txt', 'w') as LSA_output:
     for key in tfidf.keys():
       LSA[key] = []
       LSA_output.write(key + '\n')

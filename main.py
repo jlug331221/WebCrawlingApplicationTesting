@@ -2,6 +2,7 @@ import os, glob
 from bs4 import BeautifulSoup as BS
 from process_dom import extract_features
 import vector_transformations as vt
+import gensim_transformations as gt
 
 current_dir = os.path.dirname(__file__)
 html_files_dir = current_dir + '/forms/'
@@ -55,11 +56,22 @@ def extract_feature_vectors_from_university_forms():
 def main():
   feature_vectors = extract_feature_vectors_from_university_forms()
 
-  bag_of_words = vt.bag_of_words_transformation(feature_vectors)
+  ## gensim transformations
+  bag_of_words = gt.bag_of_words(feature_vectors)
 
-  tfidf = vt.tfidf_transformation(bag_of_words)
+  tfidf = gt.tf_idf(bag_of_words)
 
-  LSA = vt.LSA_transformation(tfidf)
+  LSA = gt.LSA(tfidf)
+
+  LDA_models = gt.LDA(tfidf)
+  print('\nDone')
+
+  ## sklearn transformations
+  # bag_of_words = vt.bag_of_words_transformation(feature_vectors)
+  #
+  # tfidf = vt.tfidf_transformation(bag_of_words)
+  #
+  # LSA = vt.LSA_transformation(tfidf)
 
 '''
 #
