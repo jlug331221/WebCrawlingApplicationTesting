@@ -187,11 +187,11 @@ def LDA(tfidf, visualize=False):
 
       LDA_output.write('Corpus: ' + str(corpus) + '\n\n')
 
-      LDA_output.write('LDA_model topic probabilities:\n')
+      LDA_output.write('LDA_model topics and their corresponding probabilities:\n')
       for i in range(len(tfidf[key].corpus)):
         LDA_output.write(str(lda_model.print_topic(i)) + '\n')
 
-      LDA_output.write('\n** LDA_model top topic probability: **\n')
+      LDA_output.write('\n** LDA_model top topic with probability: **\n')
       for i in range(len(tfidf[key].corpus)):
         top_topic_terms = lda_model.get_topic_terms(i, topn=1)
 
