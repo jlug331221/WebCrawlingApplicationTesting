@@ -31,7 +31,10 @@ def predict_LDA(feature_vector):
 
   print(most_similar)
 
+  my_topic = list(dictionary.token2id)[list(dictionary.token2id.values()).index(most_similar[0]+1)]
 
+  print("predicted topic:", my_topic)
 
+  return my_topic
 
 predict_LDA( ['email', 'text', 'email', 'email', '35'])
