@@ -10,6 +10,35 @@ def find_similarities(vector, feature_vectors):
   return cosine_similarity(vector, feature_vectors)
 
 
+
+def get_labeled_vectors():
+  lines = open("labeled-vectors.txt")
+
+  labeled_vectors = []
+  for line in lines:
+    items = line.split(",")
+    for item in items:
+      item = item.strip()
+      item = item.strip('(')
+      item = item.strip('[')
+      item = item.strip('(')
+      item = item.strip(')')
+      item = item.strip(']')
+      item = item.strip()
+      print(item)
+
+
+def predict_cossim(vector):
+  lines = open("labeled-vectors.txt")
+
+  for line in lines:
+    print(line)
+
+
+
+get_labeled_vectors()
+
+
 # predict label vector from labeld vectors using cosine similariy
 #
 # vector: vector to be predicted
