@@ -31,11 +31,15 @@ install scipy using wheel <br />
 **Note**: If on Windows, numpy and scipy can also be installed using Anaconda, which is a python
 data
 science platform. Anaconda comes with the necessary packages for data science projects right out
-of the box.
-visit: <http://www.anaconda.com> for more details
+of the box. *Anaconda is the preferred method for installing project dependencies.* <br />
+Visit: <http://www.anaconda.com> for more details
 
 - scikit-learn (0.19.1) <br />
 `pip install -U scikit-learn`
 
+- gensim <br />
+`pip install --upgrade gensim`
+
 ### Research Questions
-*How do we enhance web crawling based technique to adapt multiple web applications with lower labour-intensive task?*
+*How do we enhance web crawling based techniques to assist with the labor-intensive task of 
+testing multiple web applications?*
