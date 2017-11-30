@@ -1,9 +1,7 @@
 import re
 
 '''
-#
 # Extract and return features from input_element in a web form within the DOM.
-#
 '''
 def extract_features(input_element):
   feature_vector = []
@@ -28,11 +26,9 @@ def extract_features(input_element):
   return feature_vector
 
 '''
-#
 # Find the closest labels to input_element in the DOM.
 #
 # Default iterations is set to 5.
-#
 '''
 def find_closest_labels(input_element, iterations=5):
   if iterations == 0:
@@ -67,10 +63,8 @@ def find_closest_labels(input_element, iterations=5):
         return find_closest_labels(input_element.parent, iterations - 1)
 
 '''
-#
 # Returns true if input_element_attrs contains a value of 'hidden' or 'submit'
 # and false otherwise.
-#
 '''
 def contains_hidden_valueAttr_or_submitButton(input_element_attrs):
   for key, value in input_element_attrs:

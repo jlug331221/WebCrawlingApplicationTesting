@@ -1,0 +1,40 @@
+46
+32	 last family	1
+13	address	6
+16	aycreateconfirmemail	3
+23	aycreateconfirmpassword	3
+18	aycreatedob	3
+14	aycreateemail	3
+8	aycreatefn	3
+11	aycreateln	3
+22	aycreatepassword	3
+21	aycreatepc	3
+37	birthdate	1
+25	check	1
+20	code	3
+15	confirm	6
+36	confirmpassword	1
+35	confirmusername	1
+38	date	1
+12	email	7
+10	family	3
+5	first	4
+26	first given	1
+28	firstname	3
+6	given	3
+9	last	5
+33	lastname	2
+2	login	3
+29	middle	1
+31	middlenames	1
+17	mm dd yyyy	3
+7	name	9
+27	name 	2
+30	name s  	1
+4	password	13
+0	pin	3
+3	text	32
+1	userid	3
+34	username	1
+24	verify	1
+19	zip postal	3

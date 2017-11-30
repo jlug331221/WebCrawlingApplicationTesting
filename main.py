@@ -8,9 +8,7 @@ current_dir = os.path.dirname(__file__)
 html_files_dir = current_dir + '/forms/'
 
 '''
-#
 # Print the contents of feature_vectors.
-#
 '''
 def print_feature_vectors(feature_vectors):
   for html_file in glob.glob(html_files_dir + '*.html'):
@@ -22,10 +20,8 @@ def print_feature_vectors(feature_vectors):
     print('\n************************************************')
 
 '''
-#
 # Extract feature vectors from the 'forms' directory. This directory contains
 # all of the static university forms for testing purposes.
-#
 '''
 def extract_feature_vectors_from_university_forms():
   # Extract feature vectors from all university forms in the 'forms' directory
@@ -49,9 +45,17 @@ def extract_feature_vectors_from_university_forms():
   return feature_vectors
 
 '''
-#
+# Perform sklearn transformations.
+'''
+def sklean_transformations():
+  bag_of_words = vt.bag_of_words_transformation(feature_vectors)
+
+  tfidf = vt.tfidf_transformation(bag_of_words)
+
+  LSA = vt.LSA_transformation(tfidf)
+
+'''
 # Main global procedure.
-#
 '''
 def main():
   feature_vectors = extract_feature_vectors_from_university_forms()
@@ -63,20 +67,17 @@ def main():
 
   LSA = gt.LSA(tfidf)
 
-  LDA_models = gt.LDA(tfidf)
+  LDA_models = gt.LDA(tfidf, visualize=True)
+
+  gt.build_LDA_model_for_entire_training_set(feature_vectors)
+
   print('\nDone')
 
-  ## sklearn transformations
-  # bag_of_words = vt.bag_of_words_transformation(feature_vectors)
-  #
-  # tfidf = vt.tfidf_transformation(bag_of_words)
-  #
-  # LSA = vt.LSA_transformation(tfidf)
+  # sklearn transformations
+  # perform_sklean_transformations()
 
 '''
-#
 # Automatically extract features when executing this module.
-#
 '''
 if __name__ == '__main__':
   main()

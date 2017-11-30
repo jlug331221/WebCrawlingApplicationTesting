@@ -8,17 +8,37 @@ current_dir = os.path.dirname(__file__)
 
 # Utilizing a fixed seed for deterministic results
 # ** use FIXED_SEED = 6 if not removing integers from the feature vectors **
-FIXED_SEED = 4
+FIXED_SEED = 2
 
 '''
-# Remove integers from feature_vectors.
+# Remove common (English) stop words from feature_vectors[key].
 '''
-def remove_integers_from_feature_vectors(feature_vectors, key):
+def remove_stopwords(feature_vectors, key):
+  preprocessed_feature_vectors = []
+
+  # common words to remove
+  stop_list = set('your a the is and or in be to of for not on with as by ay'.split())
+
+  for feature_vector in feature_vectors.get(key):
+    removed_stopwords = []
+    for word in feature_vector:
+      if word not in stop_list:
+        removed_stopwords.append(word)
+    preprocessed_feature_vectors.append(removed_stopwords)
+
+  return preprocessed_feature_vectors
+
+'''
+# Remove integers and empty spaces from feature_vectors[key].
+'''
+def remove_integers_and_empty_spaces_from_feature_vectors(feature_vectors, key):
   for feature_vector in feature_vectors.get(key):
     for token in feature_vector:
       if token.isdigit():
         feature_vector.remove(token)
-    # feature_vector = [token for token in feature_vector if not int(token)]
+
+      if token == ' ':
+        feature_vector.remove(token)
 
 '''
 # Apply bag of words transformation on feature_vectors and output transformation to
@@ -33,25 +53,13 @@ def bag_of_words(feature_vectors):
     for key in feature_vectors.keys():
       BoW[key] = []
 
-      remove_integers_from_feature_vectors(feature_vectors, key)
+      remove_integers_and_empty_spaces_from_feature_vectors(feature_vectors, key)
 
-      # common words to remove
-      stop_list = set('your a the is and or in be to of for not on with as by ay'.split())
-      stop_list.add(' ')
+      preprocessed_feature_vectors = remove_stopwords(feature_vectors, key)
 
-      preprocessed_feature_vectors = []
-
-      for feature_vector in feature_vectors.get(key):
-        removed_stopwords = []
-        for word in feature_vector:
-          if word not in stop_list:
-            removed_stopwords.append(word)
-        preprocessed_feature_vectors.append(removed_stopwords)
-
-      # dictionary = corpora.Dictionary(feature_vectors.get(key))
       dictionary = corpora.Dictionary(preprocessed_feature_vectors)
 
-      # store the dictionary for later usage in LSI transformation
+      # store the dictionary for later usage
       dictionary.save_as_text(current_dir + '/gensim_transformation_output/dictionaries/' + key +
                               '.txt')
 
@@ -230,6 +238,38 @@ def LDA(tfidf, visualize=False):
       LDA_output.write('\n\n*************************************************************' + '\n\n')
       lda = None
 
-  LDA_model.save(current_dir + '/gensim_transformation_output/model/LDA.model')
-
   return LDA_models
+
+'''
+# Build LDA model for training set data and store to disk. 
+'''
+def build_LDA_model_for_entire_training_set(feature_vectors):
+  np_rand.seed(FIXED_SEED)
+  rand.seed(FIXED_SEED)
+
+  training_set_feature_vectors = []
+
+  for key in feature_vectors.keys():
+    remove_integers_and_empty_spaces_from_feature_vectors(feature_vectors, key)
+
+    pre_processed_feature_vectors = remove_stopwords(feature_vectors, key)
+
+    for feature_vector in pre_processed_feature_vectors:
+      training_set_feature_vectors.append(feature_vector)
+
+  dictionary = corpora.Dictionary(training_set_feature_vectors)
+
+  # store the dictionary for later usage
+  dictionary.save_as_text(current_dir + '/training_set_lda_model/training_set_dictionary.txt')
+
+  corpus = [dictionary.doc2bow(feature_vector) for feature_vector in training_set_feature_vectors]
+
+  # store corpus for later use
+  corpora.MmCorpus.serialize(current_dir + '/training_set_lda_model/training_corpus.mm', corpus)
+
+  lda_model = models.LdaModel(corpus, num_topics=len(corpus), id2word=dictionary, passes=10)
+
+  for i in range(len(corpus)):
+    print(str(lda_model.print_topic(i)) + '\n')
+
+  lda_model.save(current_dir + '/training_set_lda_model/LDA.model')
