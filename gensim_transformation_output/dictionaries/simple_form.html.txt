@@ -1,7 +1,6 @@
 2
-3	45	2
 0	first	1
 2	firstname	1
-5	last	1
+4	last	1
 1	name	2
-4	text	2
+3	text	2

@@ -6,8 +6,19 @@ import random as rand
 
 current_dir = os.path.dirname(__file__)
 
-# Utilizing a fixed seed for deterministic results; '3' seems to work best
-FIXED_SEED = 6
+# Utilizing a fixed seed for deterministic results
+# ** use FIXED_SEED = 6 if not removing integers from the feature vectors **
+FIXED_SEED = 4
+
+'''
+# Remove integers from feature_vectors.
+'''
+def remove_integers_from_feature_vectors(feature_vectors, key):
+  for feature_vector in feature_vectors.get(key):
+    for token in feature_vector:
+      if token.isdigit():
+        feature_vector.remove(token)
+    # feature_vector = [token for token in feature_vector if not int(token)]
 
 '''
 # Apply bag of words transformation on feature_vectors and output transformation to
@@ -21,6 +32,8 @@ def bag_of_words(feature_vectors):
   with open(current_dir + '/gensim_transformation_output/bag_of_words.txt', 'w') as BoW_output:
     for key in feature_vectors.keys():
       BoW[key] = []
+
+      remove_integers_from_feature_vectors(feature_vectors, key)
 
       # common words to remove
       stop_list = set('your a the is and or in be to of for not on with as by ay'.split())
@@ -157,7 +170,13 @@ def LDA(tfidf, visualize=False):
   np_rand.seed(FIXED_SEED)
   rand.seed(FIXED_SEED)
 
+  # Model used for output
   LDA_models = dict()
+
+  # Main model that is updated with each training form; this model is used for similarity
+  # inference and is saved to disk.
+  LDA_model = None
+  initialize_model = True
 
   with open(current_dir + '/gensim_transformation_output/LDA.txt', 'w') as LDA_output:
     for key in tfidf.keys():
@@ -171,17 +190,24 @@ def LDA(tfidf, visualize=False):
       corpus = corpora.MmCorpus(current_dir + '/gensim_transformation_output/serialized_corpus' +
                                 key + '.mm')
 
-      # initialize LDA_topics model
-      lda_model = models.LdaModel(tfidf[key].corpus, num_topics=len(tfidf[key].corpus),
-                                  id2word=dictionary, passes=10)
+      # initialize lda model
+      lda = models.LdaModel(tfidf[key].corpus, num_topics=len(tfidf[key].corpus),
+                            id2word=dictionary, passes=10)
+
+      if initialize_model:
+        LDA_model = models.LdaModel(tfidf[key].corpus, num_topics=len(tfidf[key].corpus),
+                              id2word=dictionary, passes=10)
+        initialize_model = False
+      else:
+        LDA_model.update(tfidf[key].corpus)
 
       LDA_output.write(key + '\n\n')
 
-      LDA_models[key] = lda_model[tfidf[key].corpus]
+      LDA_models[key] = lda[tfidf[key].corpus]
 
       if visualize:
         # prepare LDA_topics model visualization
-        LDA_vis_data = pyLDAvis.gensim.prepare(lda_model, corpus, dictionary)
+        LDA_vis_data = pyLDAvis.gensim.prepare(lda, corpus, dictionary)
         # save visualization
         pyLDAvis.save_html(LDA_vis_data, current_dir + '/visualizations/LDA_topics/' + key)
 
@@ -189,11 +215,11 @@ def LDA(tfidf, visualize=False):
 
       LDA_output.write('LDA_model topics and their corresponding probabilities:\n')
       for i in range(len(tfidf[key].corpus)):
-        LDA_output.write(str(lda_model.print_topic(i)) + '\n')
+        LDA_output.write(str(lda.print_topic(i)) + '\n')
 
       LDA_output.write('\n** LDA_model top topic with probability: **\n')
       for i in range(len(tfidf[key].corpus)):
-        top_topic_terms = lda_model.get_topic_terms(i, topn=1)
+        top_topic_terms = lda.get_topic_terms(i, topn=1)
 
         for x in top_topic_terms:
           top_topic_terms = top_topic_terms,\
@@ -202,7 +228,8 @@ def LDA(tfidf, visualize=False):
         LDA_output.write(str(top_topic_terms) + '\n')
 
       LDA_output.write('\n\n*************************************************************' + '\n\n')
+      lda = None
 
-      lda_model = None
+  LDA_model.save(current_dir + '/gensim_transformation_output/model/LDA.model')
 
   return LDA_models
