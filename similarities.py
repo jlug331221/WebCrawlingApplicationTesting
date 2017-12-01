@@ -38,5 +38,8 @@ def predict_LDA(feature_vector):
   return my_topic
 
 predict_LDA( ['email'])
-# predict_LDA( ['email', 'email', 'email', '35'])
-# predict_LDA( ['email', 'text', 'email', 'email', '35'])
+predict_LDA( ['email', 'email', 'email', '35'])
+predict_LDA( ['email', 'text', 'email', 'email', '35'])
+predict_LDA( ['password', 'text'])
+predict_LDA( ['birthday'])
+predict_LDA( ['name'])
