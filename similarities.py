@@ -21,7 +21,7 @@ def predict_LDA(feature_vector):
   vec_bow = dictionary.doc2bow(feature_vector)
   vec_lda = model_lda[vec_bow]
 
-  index = similarities.MatrixSimilarity(model_lda[corpus])
+  index = similarities.MatrixSimilarity(model_lda[corpus], num_features=46)
   # compare similarity between vec_lda and the rest of the corpus
   sims = index[vec_lda]
   # sort the sims descending order
@@ -37,4 +37,6 @@ def predict_LDA(feature_vector):
 
   return my_topic
 
-predict_LDA( ['email', 'text', 'email', 'email', '35'])
+predict_LDA( ['email'])
+# predict_LDA( ['email', 'email', 'email', '35'])
+# predict_LDA( ['email', 'text', 'email', 'email', '35'])
