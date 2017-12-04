@@ -3,6 +3,8 @@ from bs4 import BeautifulSoup as BS
 from process_dom import extract_features
 import vector_transformations as vt
 import gensim_transformations as gt
+import numpy.random as np_rand
+import random as rand
 
 current_dir = os.path.dirname(__file__)
 html_files_dir = current_dir + '/forms/'
@@ -47,7 +49,7 @@ def extract_feature_vectors_from_university_forms():
 '''
 # Perform sklearn transformations.
 '''
-def sklean_transformations():
+def perform_sklean_transformations(feature_vectors):
   bag_of_words = vt.bag_of_words_transformation(feature_vectors)
 
   tfidf = vt.tfidf_transformation(bag_of_words)
@@ -55,26 +57,37 @@ def sklean_transformations():
   LSA = vt.LSA_transformation(tfidf)
 
 '''
-# Main global procedure.
+# Perform gensim transformations.
 '''
-def main():
-  feature_vectors = extract_feature_vectors_from_university_forms()
-
-  ## gensim transformations
+def perform_gensim_transformations(feature_vectors):
   bag_of_words = gt.bag_of_words(feature_vectors)
 
   tfidf = gt.tf_idf(bag_of_words)
 
   LSA = gt.LSA(tfidf)
 
-  LDA_models = gt.LDA(tfidf, visualize=True)
+  LDA_models = gt.LDA(tfidf)
+
+def randomly_pick_training_forms():
+  print('Working on it.')
+
+'''
+# Main global procedure.
+'''
+def main():
+  feature_vectors = extract_feature_vectors_from_university_forms()
+
+  # sklearn transformations
+  # perform_sklean_transformations(feature_vectors)
+
+  # gensim transformations for testing purposes
+  # perform_gensim_transformations(feature_vectors)
+
+  training_forms = randomly_pick_training_forms()
 
   gt.build_LDA_model_for_entire_training_set(feature_vectors)
 
   print('\nDone')
-
-  # sklearn transformations
-  # perform_sklean_transformations()
 
 '''
 # Automatically extract features when executing this module.

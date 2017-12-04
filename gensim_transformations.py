@@ -269,7 +269,7 @@ def build_LDA_model_for_entire_training_set(feature_vectors):
 
   lda_model = models.LdaModel(corpus, num_topics=len(corpus), id2word=dictionary, passes=10)
 
-  for i in range(len(corpus)):
-    print(str(lda_model.print_topic(i)) + '\n')
+  # for i in range(len(corpus)):
+  #   print(str(lda_model.print_topic(i)) + '\n')
 
   lda_model.save(current_dir + '/training_set_lda_model/LDA.model')
