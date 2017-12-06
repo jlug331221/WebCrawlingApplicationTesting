@@ -112,24 +112,26 @@ def get_forms_under_test():
 # Main global procedure.
 '''
 def main():
-  # sklearn transformations
-  # perform_sklean_transformations(feature_vectors)
+  training_data_percentages = [50, 60, 70, 80, 90]
 
-  # gensim transformations for testing purposes
-  # perform_gensim_transformations(feature_vectors)
-
-  training_forms = randomly_pick_training_forms(training_data_percentage=60)
+  print('Getting forms under test...')
   forms_under_test = get_forms_under_test()
-
-  training_feature_vectors = extract_feature_vectors(training_forms_dir, training_forms)
   forms_under_test_feature_vectors = extract_feature_vectors(forms_under_test_dir, forms_under_test)
-
-  forms_under_test_feature_vectors =\
+  print('Pre-processing forms under test...\n')
+  forms_under_test_feature_vectors = \
     gt.pre_process_feature_vectors(forms_under_test_feature_vectors)
 
-  gt.build_LDA_model_for_entire_training_set(training_feature_vectors)
+  for i in range(len(training_data_percentages)):
+    training_forms = randomly_pick_training_forms(
+      training_data_percentage=training_data_percentages[i])
 
-  similarities.predict_LDA(forms_under_test_feature_vectors)
+    training_feature_vectors = extract_feature_vectors(training_forms_dir, training_forms)
+
+    print('Generating LDA model with ' + str(training_data_percentages[i]) +
+          '% of the training forms...')
+    gt.build_LDA_model_for_training_set(training_feature_vectors)
+
+    similarities.predict_LDA(forms_under_test_feature_vectors, percentage)
 
   print('\nDone')
 

@@ -2,7 +2,6 @@ import yaml
 import os
 import requests
 
-
 input_bank = os.path.join(os.path.dirname(__file__), "test-bank.yaml")
 
 banks = []

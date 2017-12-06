@@ -2,7 +2,6 @@ import yaml
 import os
 import requests
 
-
 config = os.path.join(os.path.dirname(__file__), "web-crawler-config.yaml")
 
 sites = []

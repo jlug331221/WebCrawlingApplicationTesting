@@ -1,14 +1,19 @@
-from gensim import corpora, models, similarities
+import os
+from gensim import corpora, models
+import numpy
+
+CURRENT_DIR = os.path.dirname(__file__)
+BASE_SAVED_LDA_MODEL_DIR = 'training_set_lda_model'
 
 def predict_LDA(forms_under_test_feature_vectors):
-  base_saved_output = 'training_set_lda_model'
+  if not os.path.exists(os.path.join(CURRENT_DIR, 'lda_results')):
+    os.makedirs('lda_results')
 
-  dictionary = corpora.Dictionary.load_from_text(base_saved_output + '/training_set_dictionary.txt')
-  corpus = corpora.MmCorpus(base_saved_output + '/training_corpus.mm')
+  dictionary = corpora.Dictionary.load_from_text(BASE_SAVED_LDA_MODEL_DIR +
+                                                 '/training_set_dictionary.txt')
+  corpus = corpora.MmCorpus(BASE_SAVED_LDA_MODEL_DIR + '/training_corpus.mm')
 
-  model_lda = models.LdaModel.load(base_saved_output + '/LDA.model')
-
-  print(model_lda.show_topics(num_topics=len(corpus)))
+  model_lda = models.LdaModel.load(BASE_SAVED_LDA_MODEL_DIR + '/LDA.model')
 
   for feature_vector in forms_under_test_feature_vectors:
     print('Feature vector under test: ' + str(feature_vector))
@@ -16,18 +21,19 @@ def predict_LDA(forms_under_test_feature_vectors):
     vec_bow = dictionary.doc2bow(feature_vector)
     vec_lda = model_lda[vec_bow]
 
-    index = similarities.MatrixSimilarity(model_lda[corpus])
+    word_count_array = numpy.empty((len(vec_lda), 2), dtype=numpy.object) # create empty numpy array
+    for i in range(len(vec_lda)): # populate with the results in 'vec_lda'
+      word_count_array[i, 0] = vec_lda[i][0]
+      word_count_array[i, 1] = vec_lda[i][1]
 
-    # compare similarity between vec_lda and the rest of the corpus
-    sims = index[vec_lda]
-    # sort the sims descending order
-    sims = sorted(enumerate(sims), key=lambda item: -item[1])
+    idx = numpy.argsort(word_count_array[:, 1]) # sort based on probability
+    idx = idx[::-1] # idx <- data with highest probability
+    word_count_array = word_count_array[idx]
 
-    most_similar = sims[0]
+    final = model_lda.print_topic(word_count_array[0, 0], 1) # store topic and probability in final
 
-    my_topic = list(dictionary.token2id)[list(dictionary.token2id.values())
-      .index(most_similar[0]+1)]
+    topic = final.split('*')[1]
+    probability = final.split('*')[0]
 
-    print('Predicted probability: ' + str(most_similar))
-    print('Predicted topic: ', my_topic)
-    print()
+    print('Possible predicted topic: ' + str(topic))
+    print('Predicted probability: ' + str(probability) + '\n')

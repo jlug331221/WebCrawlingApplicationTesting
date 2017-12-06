@@ -1,8 +1,6 @@
 import os
-from gensim import corpora, models, similarities, matutils
+from gensim import corpora, models, matutils
 import pyLDAvis.gensim
-import numpy.random as np_rand
-import random as rand
 
 current_dir = os.path.dirname(__file__)
 
@@ -15,14 +13,18 @@ def remove_stopwords(feature_vectors, key):
   # common words to remove
   stop_list = set('your the is and or in be to of for not on with as by ay at this than '
                   'did an again 65 try you any no 10 alt a b c d e f g h i j k l m n o p'
-                  'q r s t u v w x y z'.split())
+                  'q r s t u v w x y z january february march april may june july august '
+                  'september october november december com can invalid input but less '
+                  'least long match characters consisting gender male female please '
+                  'include new ctl00 content changed confirm later enter radio receivetext '
+                  'receivetext1'.split())
 
   for feature_vector in feature_vectors.get(key):
-    removed_stopwords = []
+    words_not_in_stopwords = []
     for word in feature_vector:
       if word not in stop_list:
-        removed_stopwords.append(word)
-    feature_vectors_without_stop_words.append(removed_stopwords)
+        words_not_in_stopwords.append(word)
+    feature_vectors_without_stop_words.append(words_not_in_stopwords)
 
   return feature_vectors_without_stop_words
 
@@ -251,16 +253,9 @@ def LDA(tfidf, visualize=False):
 '''
 # Build LDA model for training set data and store to disk. 
 '''
-def build_LDA_model_for_entire_training_set(feature_vectors):
-  # training_set_feature_vectors = []
-  #
-  # for key in feature_vectors.keys():
-  #   remove_integers_and_empty_spaces_from_feature_vectors(feature_vectors, key)
-  #
-  #   pre_processed_feature_vectors = remove_stopwords(feature_vectors, key)
-  #
-  #   for feature_vector in pre_processed_feature_vectors:
-  #     training_set_feature_vectors.append(feature_vector)
+def build_LDA_model_for_training_set(feature_vectors):
+  if not os.path.exists(os.path.join(current_dir, 'training_set_lda_model')):
+    os.makedirs('training_set_lda_model')
 
   training_set_feature_vectors = pre_process_feature_vectors(feature_vectors)
 
@@ -274,9 +269,6 @@ def build_LDA_model_for_entire_training_set(feature_vectors):
   # store corpus for later use
   corpora.MmCorpus.serialize(current_dir + '/training_set_lda_model/training_corpus.mm', corpus)
 
-  lda_model = models.LdaModel(corpus, num_topics=len(corpus), id2word=dictionary, passes=10)
-
-  # for i in range(len(corpus)):
-  #   print(str(lda_model.print_topic(i)) + '\n')
+  lda_model = models.LdaModel(corpus, num_topics=len(corpus), id2word=dictionary, passes=20)
 
   lda_model.save(current_dir + '/training_set_lda_model/LDA.model')

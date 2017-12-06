@@ -1,3 +1,4 @@
 .idea/
 __pycache__/
 training_set_lda_model/
+lda_results
