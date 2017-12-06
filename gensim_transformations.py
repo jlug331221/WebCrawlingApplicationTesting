@@ -2,7 +2,7 @@ import os
 from gensim import corpora, models, matutils
 import pyLDAvis.gensim
 
-current_dir = os.path.dirname(__file__)
+CURRENT_DIR = os.path.dirname(__file__)
 
 '''
 # Remove common (English) stop words from feature_vectors[key].
@@ -65,7 +65,7 @@ def pre_process_feature_vectors(feature_vectors):
 def bag_of_words(feature_vectors):
   BoW = dict()
 
-  with open(current_dir + '/gensim_transformation_output/bag_of_words.txt', 'w') as BoW_output:
+  with open(CURRENT_DIR + '/gensim_transformation_output/bag_of_words.txt', 'w') as BoW_output:
     for key in feature_vectors.keys():
       BoW[key] = []
 
@@ -76,7 +76,7 @@ def bag_of_words(feature_vectors):
       dictionary = corpora.Dictionary(preprocessed_feature_vectors)
 
       # store the dictionary for later usage
-      dictionary.save_as_text(current_dir + '/gensim_transformation_output/dictionaries/' + key +
+      dictionary.save_as_text(CURRENT_DIR + '/gensim_transformation_output/dictionaries/' + key +
                               '.txt')
 
       BoW_output.write(key + ' has the following feature vectors:\n')
@@ -91,7 +91,7 @@ def bag_of_words(feature_vectors):
                   for feature_vector in preprocessed_feature_vectors]
 
       # store corpus for later use
-      corpora.MmCorpus.serialize(current_dir + '/gensim_transformation_output/serialized_corpus/' +
+      corpora.MmCorpus.serialize(CURRENT_DIR + '/gensim_transformation_output/serialized_corpus/' +
                                  key + '.mm', BoW[key])
 
       BoW_output.write('Bag of words counts for each feature vector:\n')
@@ -111,11 +111,11 @@ def bag_of_words(feature_vectors):
 def tf_idf(bag_of_words):
   tfidf = dict()
 
-  with open(current_dir + '/gensim_transformation_output/tfidf.txt', 'w') as tfidf_output:
+  with open(CURRENT_DIR + '/gensim_transformation_output/tfidf.txt', 'w') as tfidf_output:
     for key in bag_of_words.keys():
       tfidf[key] = None
 
-      dictionary = corpora.Dictionary.load_from_text(current_dir +
+      dictionary = corpora.Dictionary.load_from_text(CURRENT_DIR +
                     '/gensim_transformation_output/dictionaries/' + key + '.txt')
 
       # initialize TF_IDF model
@@ -142,11 +142,11 @@ def tf_idf(bag_of_words):
 def LSA(tfidf):
   LSA = dict()
 
-  with open(current_dir + '/gensim_transformation_output/LSA.txt', 'w') as LSA_output:
+  with open(CURRENT_DIR + '/gensim_transformation_output/LSA.txt', 'w') as LSA_output:
     for key in tfidf.keys():
       LSA[key] = None
 
-      dictionary = corpora.Dictionary.load_from_text(current_dir +
+      dictionary = corpora.Dictionary.load_from_text(CURRENT_DIR +
                     '/gensim_transformation_output/dictionaries/' + key + '.txt')
 
       # initialize LSI model
@@ -196,16 +196,16 @@ def LDA(tfidf, visualize=False):
   LDA_model = None
   initialize_model = True
 
-  with open(current_dir + '/gensim_transformation_output/LDA.txt', 'w') as LDA_output:
+  with open(CURRENT_DIR + '/gensim_transformation_output/LDA.txt', 'w') as LDA_output:
     for key in tfidf.keys():
       LDA_models[key] = None
 
-      dictionary = corpora.Dictionary.load_from_text(current_dir +
+      dictionary = corpora.Dictionary.load_from_text(CURRENT_DIR +
                       '/gensim_transformation_output/dictionaries/' + key + '.txt')
 
       tokens2id = dictionary.token2id
 
-      corpus = corpora.MmCorpus(current_dir + '/gensim_transformation_output/serialized_corpus' +
+      corpus = corpora.MmCorpus(CURRENT_DIR + '/gensim_transformation_output/serialized_corpus' +
                                 key + '.mm')
 
       # initialize lda model
@@ -227,7 +227,7 @@ def LDA(tfidf, visualize=False):
         # prepare LDA_topics model visualization
         LDA_vis_data = pyLDAvis.gensim.prepare(lda, corpus, dictionary)
         # save visualization
-        pyLDAvis.save_html(LDA_vis_data, current_dir + '/visualizations/LDA_topics/' + key)
+        pyLDAvis.save_html(LDA_vis_data, CURRENT_DIR + '/visualizations/LDA_topics/' + key)
 
       LDA_output.write('Corpus: ' + str(corpus) + '\n\n')
 
@@ -254,7 +254,7 @@ def LDA(tfidf, visualize=False):
 # Build LDA model for training set data and store to disk. 
 '''
 def build_LDA_model_for_training_set(feature_vectors):
-  if not os.path.exists(os.path.join(current_dir, 'training_set_lda_model')):
+  if not os.path.exists(os.path.join(CURRENT_DIR, 'training_set_lda_model')):
     os.makedirs('training_set_lda_model')
 
   training_set_feature_vectors = pre_process_feature_vectors(feature_vectors)
@@ -262,13 +262,13 @@ def build_LDA_model_for_training_set(feature_vectors):
   dictionary = corpora.Dictionary(training_set_feature_vectors)
 
   # store the dictionary for later usage
-  dictionary.save_as_text(current_dir + '/training_set_lda_model/training_set_dictionary.txt')
+  dictionary.save_as_text(CURRENT_DIR + '/training_set_lda_model/training_set_dictionary.txt')
 
   corpus = [dictionary.doc2bow(feature_vector) for feature_vector in training_set_feature_vectors]
 
   # store corpus for later use
-  corpora.MmCorpus.serialize(current_dir + '/training_set_lda_model/training_corpus.mm', corpus)
+  corpora.MmCorpus.serialize(CURRENT_DIR + '/training_set_lda_model/training_corpus.mm', corpus)
 
   lda_model = models.LdaModel(corpus, num_topics=len(corpus), id2word=dictionary, passes=20)
 
-  lda_model.save(current_dir + '/training_set_lda_model/LDA.model')
+  lda_model.save(CURRENT_DIR + '/training_set_lda_model/LDA.model')

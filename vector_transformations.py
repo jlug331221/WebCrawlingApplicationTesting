@@ -2,10 +2,9 @@ import os, re
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from sklearn.decomposition import TruncatedSVD
 
-current_dir = os.path.dirname(__file__)
+CURRENT_DIR = os.path.dirname(__file__)
 
 '''
-#
 # Return bag of words transformation on feature_vectors (for each document).
 #
 # Output is written to 'sklearn_transformation_output/bag_of_words.txt'.
@@ -35,13 +34,12 @@ current_dir = os.path.dirname(__file__)
 # document.
 # This is verified by printing the feature names of the vectorizer, which is the last list in the
 # example.
-#
 '''
 def bag_of_words_transformation(feature_vectors):
   bag_of_words = dict()
   count_vectorizer = CountVectorizer()
 
-  with open(current_dir + '/sklearn_transformation_output/bag_of_words.txt', 'w') as BoW_output:
+  with open(CURRENT_DIR + '/sklearn_transformation_output/bag_of_words.txt', 'w') as BoW_output:
     for key in feature_vectors.keys():
       bag_of_words[key] = []
       BoW_output.write(key + '\n')
@@ -77,21 +75,20 @@ def bag_of_words_transformation(feature_vectors):
   return bag_of_words
 
 '''
-#
 # Apply and return the TF-IDF transformation on bag_of_words. The transformation converts
 # the counts in bag_of_words to real-value weights (real numbers). TF-IDF measures the
 # relevance of the word and not the frequency.
+#
 # TF-IDF first measures the number of times a word appears in a document. The inverse
 # document frequency aspect handles words such as 'and' or 'but' which appear in all
 # documents and those words are given less relevance (weight). The result of TF-IDF is
 # words that are frequent and distinctive.
-#
 '''
 def tfidf_transformation(bag_of_words):
   tfidf = dict()
   tfidf_transformer = TfidfTransformer()
 
-  with open(current_dir + '/sklearn_transformation_output/tfidf.txt', 'w') as tfidf_output:
+  with open(CURRENT_DIR + '/sklearn_transformation_output/tfidf.txt', 'w') as tfidf_output:
     for key in bag_of_words.keys():
       tfidf[key] = []
       tfidf_output.write(key + '\n')
@@ -105,17 +102,15 @@ def tfidf_transformation(bag_of_words):
   return tfidf
 
 '''
-#
 # Apply and return the latent semantic analysis (LSA) transformation on tfidf. This 
 # transformation reduces the dimension of the vector space by means of singular value
 # decomposition (SVD).
-#
 '''
 def LSA_transformation(tfidf):
   LSA = dict()
   svd = TruncatedSVD()
 
-  with open(current_dir + '/sklearn_transformation_output/LSA.txt', 'w') as LSA_output:
+  with open(CURRENT_DIR + '/sklearn_transformation_output/LSA.txt', 'w') as LSA_output:
     for key in tfidf.keys():
       LSA[key] = []
       LSA_output.write(key + '\n')

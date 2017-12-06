@@ -3,20 +3,30 @@ from bs4 import BeautifulSoup as BS
 from process_dom import extract_features
 import vector_transformations as vt
 import gensim_transformations as gt
-import similarities
+import topic_prediction
 import random as rand
+import shutil
 from math import ceil
 
-current_dir = os.path.dirname(__file__)
-training_forms_dir = current_dir + '/training_forms/'
-forms_under_test_dir = current_dir + '/forms_under_test/'
+CURRENT_DIR = os.path.dirname(__file__)
+TRAINING_FORMS_DIR = CURRENT_DIR + '/training_forms/'
+FORMS_UNDER_TEST_DIR = CURRENT_DIR + '/forms_under_test/'
+TOTAL_ITERATIONS = 10
 
 '''
-# Print the contents of feature_vectors.
+# Remove training set LDA model from disk.
 '''
-def print_feature_vectors(feature_vectors):
-  for html_file in glob.glob(training_forms_dir + '*.html'):
-    file_name = html_file.split('training_forms', 1)[1]
+def cleanup_training_set_lda_model_directory():
+  print('Performing cleanup...\n')
+  shutil.rmtree('training_set_lda_model')
+  print('Cleanup complete')
+
+'''
+# Print the contents of feature_vectors in dir_path/forms_type.
+'''
+def print_feature_vectors(feature_vectors, dir_path, forms_type):
+  for html_file in glob.glob(dir_path + '*.html'):
+    file_name = html_file.split(forms_type, 1)[1]
 
     print('\nFile \'', file_name, '\' has the following extracted feature vectors:\n')
     for feature_vector in feature_vectors[file_name]:
@@ -32,9 +42,9 @@ def extract_feature_vectors(dir, forms_list):
   for html_file in glob.glob(dir + '*.html'):
     file = open(html_file, 'r')
 
-    if dir == training_forms_dir:
+    if dir == TRAINING_FORMS_DIR:
       file_name = html_file.split('training_forms', 1)[1]
-    if dir == forms_under_test_dir:
+    if dir == FORMS_UNDER_TEST_DIR:
       file_name = html_file.split('forms_under_test', 1)[1]
 
     if file_name in forms_list:
@@ -83,7 +93,7 @@ def randomly_pick_training_forms(training_data_percentage):
   total_training_forms = []
   training_forms = []
 
-  for html_file in glob.glob(training_forms_dir + '*.html'):
+  for html_file in glob.glob(TRAINING_FORMS_DIR + '*.html'):
     file_name = html_file.split('training_forms', 1)[1]
     total_training_forms.append(file_name)
 
@@ -102,7 +112,7 @@ def randomly_pick_training_forms(training_data_percentage):
 def get_forms_under_test():
   forms_under_test = []
 
-  for html_file in glob.glob(forms_under_test_dir + '*.html'):
+  for html_file in glob.glob(FORMS_UNDER_TEST_DIR + '*.html'):
     file_name = html_file.split('forms_under_test', 1)[1]
     forms_under_test.append(file_name)
 
@@ -112,26 +122,36 @@ def get_forms_under_test():
 # Main global procedure.
 '''
 def main():
-  training_data_percentages = [50, 60, 70, 80, 90]
+  training_data_percentages = [25, 50, 75, 90]
+
+  current_iteration = 1
 
   print('Getting forms under test...')
   forms_under_test = get_forms_under_test()
-  forms_under_test_feature_vectors = extract_feature_vectors(forms_under_test_dir, forms_under_test)
+  forms_under_test_feature_vectors = extract_feature_vectors(FORMS_UNDER_TEST_DIR, forms_under_test)
   print('Pre-processing forms under test...\n')
   forms_under_test_feature_vectors = \
     gt.pre_process_feature_vectors(forms_under_test_feature_vectors)
 
-  for i in range(len(training_data_percentages)):
-    training_forms = randomly_pick_training_forms(
-      training_data_percentage=training_data_percentages[i])
+  while current_iteration <= TOTAL_ITERATIONS:
+    for i in range(len(training_data_percentages)):
+      training_forms = randomly_pick_training_forms(
+        training_data_percentage=training_data_percentages[i])
 
-    training_feature_vectors = extract_feature_vectors(training_forms_dir, training_forms)
+      training_feature_vectors = extract_feature_vectors(TRAINING_FORMS_DIR, training_forms)
 
-    print('Generating LDA model with ' + str(training_data_percentages[i]) +
-          '% of the training forms...')
-    gt.build_LDA_model_for_training_set(training_feature_vectors)
+      print('Iteration ' + str(current_iteration) + ' -> ', end='')
+      print('Generating LDA model with ' + str(training_data_percentages[i]) +
+            '% of the training forms...')
+      gt.build_LDA_model_for_training_set(training_feature_vectors)
 
-    similarities.predict_LDA(forms_under_test_feature_vectors, percentage)
+      topic_prediction.predict_LDA(forms_under_test_feature_vectors, training_data_percentages[i],
+                                   current_iteration)
+    print('Iteration ' + str(current_iteration) + ' complete.\n')
+
+    current_iteration += 1
+
+  cleanup_training_set_lda_model_directory()
 
   print('\nDone')
 
