@@ -9,8 +9,11 @@ BASE_SAVED_LDA_MODEL_DIR = 'training_set_lda_model'
 # Return true if topic identifies feature_vector and false otherwise.
 '''
 def topic_predicted_correctly(topic, feature_vector):
+  if topic == 'text':
+    return False
+
   for word in feature_vector:
-    if topic == word or topic in word or word in topic:
+    if (topic == word) or (word in topic):
       return True
 
   return False
@@ -82,6 +85,9 @@ def predict_LDA(forms_under_test_feature_vectors, percentage_of_data, current_it
                              str(percentage_of_data) + '_LDA_accuracy.output.txt', 'w')
 
   prediction_accuracy = (predicted_correctly / total_features) * 100
+
+  print('\tPredicted ' + str(predicted_correctly) + ' / ' + str(total_features)
+        + ' feature vectors = %.2f%%' % prediction_accuracy + ' prediction accuracy')
 
   LDA_accuracy_output.write('Iteration ' + str(current_iteration) + ':\n' +
                             str(percentage_of_data) + '% of training forms used\n' +

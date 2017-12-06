@@ -122,7 +122,7 @@ def get_forms_under_test():
 # Main global procedure.
 '''
 def main():
-  training_data_percentages = [25, 50, 75, 90]
+  training_data_percentages = [5, 25, 50, 75]
 
   current_iteration = 1
 
@@ -142,7 +142,7 @@ def main():
 
       print('Iteration ' + str(current_iteration) + ' -> ', end='')
       print('Generating LDA model with ' + str(training_data_percentages[i]) +
-            '% of the training forms...')
+            '% of the training forms...', end='')
       gt.build_LDA_model_for_training_set(training_feature_vectors)
 
       topic_prediction.predict_LDA(forms_under_test_feature_vectors, training_data_percentages[i],
