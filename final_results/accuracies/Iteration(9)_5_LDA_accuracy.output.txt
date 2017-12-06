@@ -1,0 +1,3 @@
+Iteration 9:
+5% of training forms used
+Prediction accuracy = 25.64%

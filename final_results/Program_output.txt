@@ -1,0 +1,68 @@
+Getting forms under test...
+Pre-processing forms under test...
+
+Iteration 1 -> Generating LDA model with 5% of the training forms...	Predicted 57 / 78 feature vectors = 73.08% prediction accuracy
+Iteration 1 -> Generating LDA model with 25% of the training forms...	Predicted 70 / 78 feature vectors = 89.74% prediction accuracy
+Iteration 1 -> Generating LDA model with 50% of the training forms...	Predicted 61 / 78 feature vectors = 78.21% prediction accuracy
+Iteration 1 -> Generating LDA model with 75% of the training forms...	Predicted 69 / 78 feature vectors = 88.46% prediction accuracy
+Iteration 1 complete.
+
+Iteration 2 -> Generating LDA model with 5% of the training forms...	Predicted 56 / 78 feature vectors = 71.79% prediction accuracy
+Iteration 2 -> Generating LDA model with 25% of the training forms...	Predicted 47 / 78 feature vectors = 60.26% prediction accuracy
+Iteration 2 -> Generating LDA model with 50% of the training forms...	Predicted 75 / 78 feature vectors = 96.15% prediction accuracy
+Iteration 2 -> Generating LDA model with 75% of the training forms...	Predicted 68 / 78 feature vectors = 87.18% prediction accuracy
+Iteration 2 complete.
+
+Iteration 3 -> Generating LDA model with 5% of the training forms...	Predicted 68 / 78 feature vectors = 87.18% prediction accuracy
+Iteration 3 -> Generating LDA model with 25% of the training forms...	Predicted 72 / 78 feature vectors = 92.31% prediction accuracy
+Iteration 3 -> Generating LDA model with 50% of the training forms...	Predicted 73 / 78 feature vectors = 93.59% prediction accuracy
+Iteration 3 -> Generating LDA model with 75% of the training forms...	Predicted 70 / 78 feature vectors = 89.74% prediction accuracy
+Iteration 3 complete.
+
+Iteration 4 -> Generating LDA model with 5% of the training forms...	Predicted 46 / 78 feature vectors = 58.97% prediction accuracy
+Iteration 4 -> Generating LDA model with 25% of the training forms...	Predicted 72 / 78 feature vectors = 92.31% prediction accuracy
+Iteration 4 -> Generating LDA model with 50% of the training forms...	Predicted 48 / 78 feature vectors = 61.54% prediction accuracy
+Iteration 4 -> Generating LDA model with 75% of the training forms...	Predicted 70 / 78 feature vectors = 89.74% prediction accuracy
+Iteration 4 complete.
+
+Iteration 5 -> Generating LDA model with 5% of the training forms...	Predicted 40 / 78 feature vectors = 51.28% prediction accuracy
+Iteration 5 -> Generating LDA model with 25% of the training forms...	Predicted 72 / 78 feature vectors = 92.31% prediction accuracy
+Iteration 5 -> Generating LDA model with 50% of the training forms...	Predicted 71 / 78 feature vectors = 91.03% prediction accuracy
+Iteration 5 -> Generating LDA model with 75% of the training forms...	Predicted 71 / 78 feature vectors = 91.03% prediction accuracy
+Iteration 5 complete.
+
+Iteration 6 -> Generating LDA model with 5% of the training forms...	Predicted 23 / 78 feature vectors = 29.49% prediction accuracy
+Iteration 6 -> Generating LDA model with 25% of the training forms...	Predicted 63 / 78 feature vectors = 80.77% prediction accuracy
+Iteration 6 -> Generating LDA model with 50% of the training forms...	Predicted 71 / 78 feature vectors = 91.03% prediction accuracy
+Iteration 6 -> Generating LDA model with 75% of the training forms...	Predicted 70 / 78 feature vectors = 89.74% prediction accuracy
+Iteration 6 complete.
+
+Iteration 7 -> Generating LDA model with 5% of the training forms...	Predicted 32 / 78 feature vectors = 41.03% prediction accuracy
+Iteration 7 -> Generating LDA model with 25% of the training forms...	Predicted 59 / 78 feature vectors = 75.64% prediction accuracy
+Iteration 7 -> Generating LDA model with 50% of the training forms...	Predicted 69 / 78 feature vectors = 88.46% prediction accuracy
+Iteration 7 -> Generating LDA model with 75% of the training forms...	Predicted 72 / 78 feature vectors = 92.31% prediction accuracy
+Iteration 7 complete.
+
+Iteration 8 -> Generating LDA model with 5% of the training forms...	Predicted 58 / 78 feature vectors = 74.36% prediction accuracy
+Iteration 8 -> Generating LDA model with 25% of the training forms...	Predicted 40 / 78 feature vectors = 51.28% prediction accuracy
+Iteration 8 -> Generating LDA model with 50% of the training forms...	Predicted 67 / 78 feature vectors = 85.90% prediction accuracy
+Iteration 8 -> Generating LDA model with 75% of the training forms...	Predicted 71 / 78 feature vectors = 91.03% prediction accuracy
+Iteration 8 complete.
+
+Iteration 9 -> Generating LDA model with 5% of the training forms...	Predicted 20 / 78 feature vectors = 25.64% prediction accuracy
+Iteration 9 -> Generating LDA model with 25% of the training forms...	Predicted 67 / 78 feature vectors = 85.90% prediction accuracy
+Iteration 9 -> Generating LDA model with 50% of the training forms...	Predicted 58 / 78 feature vectors = 74.36% prediction accuracy
+Iteration 9 -> Generating LDA model with 75% of the training forms...	Predicted 72 / 78 feature vectors = 92.31% prediction accuracy
+Iteration 9 complete.
+
+Iteration 10 -> Generating LDA model with 5% of the training forms...	Predicted 47 / 78 feature vectors = 60.26% prediction accuracy
+Iteration 10 -> Generating LDA model with 25% of the training forms...	Predicted 67 / 78 feature vectors = 85.90% prediction accuracy
+Iteration 10 -> Generating LDA model with 50% of the training forms...	Predicted 71 / 78 feature vectors = 91.03% prediction accuracy
+Iteration 10 -> Generating LDA model with 75% of the training forms...	Predicted 74 / 78 feature vectors = 94.87% prediction accuracy
+Iteration 10 complete.
+
+Performing cleanup...
+
+Cleanup complete
+
+Done

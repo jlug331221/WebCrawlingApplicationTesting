@@ -1,0 +1,313 @@
+** Iteration: 8 -> Using 50% of training forms **
+Feature vector under test: ['first', 'name', 'firstname', 'firstname', 'text']
+Possible predicted topic: "firstname"
+Probability: 0.619
+
+Feature vector under test: ['middle', 'name', 'middlename', 'middlename', 'text']
+Possible predicted topic: "middlename"
+Probability: 0.232
+
+Feature vector under test: ['last', 'name', 'lastname', 'lastname', 'text']
+Possible predicted topic: "lastname"
+Probability: 0.389
+
+Feature vector under test: ['previous', 'name', 'previousname', 'previousname', 'text']
+Possible predicted topic: "last"
+Probability: 0.432
+
+Feature vector under test: ['date', 'birth', 'dateofbirth', 'dateofbirth', 'text']
+Possible predicted topic: "date"
+Probability: 0.230
+
+Feature vector under test: ['email', 'address', 'emailaddress', 'emailaddress', 'text']
+Possible predicted topic: "processrequest"
+Probability: 0.368
+
+Feature vector under test: ['password', 'password', 'password', 'password']
+Possible predicted topic: "password"
+Probability: 0.973
+
+Feature vector under test: ['password', 'confirmpassword', 'confirmpassword', 'password']
+Possible predicted topic: "password"
+Probability: 0.529
+
+Feature vector under test: ['emailaddress', 'emailaddress', 'text']
+Possible predicted topic: "processrequest"
+Probability: 0.368
+
+Feature vector under test: ['fullname', 'fullname', 'text']
+Possible predicted topic: " mm dd yyyy "
+Probability: 0.538
+
+Feature vector under test: ['password', 'password', 'password']
+Possible predicted topic: "password"
+Probability: 0.973
+
+Feature vector under test: ['confirmpassword', 'confirmpassword', 'password']
+Possible predicted topic: "password"
+Probability: 0.529
+
+Feature vector under test: ['dateofbirth', 'dateofbirth', 'text']
+Possible predicted topic: "date"
+Probability: 0.230
+
+Feature vector under test: ['email', 'address', 'username', 'email', 'email', 'user', 'example', 'text']
+Possible predicted topic: "email"
+Probability: 0.502
+
+Feature vector under test: ['password', 'password', 'password', 'password', 'password']
+Possible predicted topic: "password"
+Probability: 0.973
+
+Feature vector under test: ['password', 'password', 'confirmpassword', 'password', 'confirmpassword']
+Possible predicted topic: "password"
+Probability: 0.529
+
+Feature vector under test: ['first', 'name', 'firstname', 'firstname', 'text']
+Possible predicted topic: "firstname"
+Probability: 0.619
+
+Feature vector under test: ['middle', 'name', 'middlename', 'middlename', 'text']
+Possible predicted topic: "middlename"
+Probability: 0.232
+
+Feature vector under test: ['last', 'name', 'lastname', 'lastname', 'text']
+Possible predicted topic: "lastname"
+Probability: 0.389
+
+Feature vector under test: ['english', 'first', 'name', 'englishfirstname', 'englishfirstname', 'text']
+Possible predicted topic: "englishfirstname"
+Probability: 0.232
+
+Feature vector under test: ['english', 'middle', 'name', 'englishmiddlename', 'englishmiddlename', 'text']
+Possible predicted topic: "englishmiddlename"
+Probability: 0.318
+
+Feature vector under test: ['english', 'last', 'name', 'englishlastname', 'englishlastname', 'text']
+Possible predicted topic: "englishlastname"
+Probability: 0.318
+
+Feature vector under test: ['date', 'birth', 'date', 'dateofbirth', 'mm', 'dd', 'yyyy', 'text']
+Possible predicted topic: "date"
+Probability: 0.230
+
+Feature vector under test: ['area', 'city', 'code', 'local', 'number', 'homenumber', 'homenumber', 'text']
+Possible predicted topic: "homenumber"
+Probability: 0.241
+
+Feature vector under test: ['area', 'city', 'code', 'local', 'number', 'mobilenumber', 'mobilenumber', 'text']
+Possible predicted topic: "mobilenumber"
+Probability: 0.241
+
+Feature vector under test: ['time', 'checkbox', 'true']
+Possible predicted topic: "time"
+Probability: 0.304
+
+Feature vector under test: ['email', 'address', 'username', 'email', 'email', 'user', 'example', 'text']
+Possible predicted topic: "email"
+Probability: 0.502
+
+Feature vector under test: ['password', 'password', 'password', 'password', 'password']
+Possible predicted topic: "password"
+Probability: 0.973
+
+Feature vector under test: ['password', 'password', 'confirmpassword', 'password', 'confirmpassword']
+Possible predicted topic: "password"
+Probability: 0.529
+
+Feature vector under test: ['first', 'name', 'firstname', 'firstname', 'text']
+Possible predicted topic: "firstname"
+Probability: 0.619
+
+Feature vector under test: ['middle', 'name', 'middlename', 'middlename', 'text']
+Possible predicted topic: "middlename"
+Probability: 0.232
+
+Feature vector under test: ['last', 'name', 'lastname', 'lastname', 'text']
+Possible predicted topic: "lastname"
+Probability: 0.389
+
+Feature vector under test: ['english', 'first', 'name', 'englishfirstname', 'englishfirstname', 'text']
+Possible predicted topic: "englishfirstname"
+Probability: 0.232
+
+Feature vector under test: ['english', 'middle', 'name', 'englishmiddlename', 'englishmiddlename', 'text']
+Possible predicted topic: "englishmiddlename"
+Probability: 0.318
+
+Feature vector under test: ['english', 'last', 'name', 'englishlastname', 'englishlastname', 'text']
+Possible predicted topic: "englishlastname"
+Probability: 0.318
+
+Feature vector under test: ['date', 'birth', 'date', 'dateofbirth', 'mm', 'dd', 'yyyy', 'text']
+Possible predicted topic: "date"
+Probability: 0.230
+
+Feature vector under test: ['area', 'city', 'code', 'local', 'number', 'homenumber', 'homenumber', 'text']
+Possible predicted topic: "homenumber"
+Probability: 0.241
+
+Feature vector under test: ['area', 'city', 'code', 'local', 'number', 'mobilenumber', 'mobilenumber', 'text']
+Possible predicted topic: "mobilenumber"
+Probability: 0.241
+
+Feature vector under test: ['time', 'checkbox', 'true']
+Possible predicted topic: "time"
+Probability: 0.304
+
+Feature vector under test: ['required', 'firstname', 'text', 'firstname']
+Possible predicted topic: "firstname"
+Probability: 0.619
+
+Feature vector under test: ['middle', 'name', 'middlename', 'text', 'middlename']
+Possible predicted topic: "middlename"
+Probability: 0.232
+
+Feature vector under test: ['required', 'lastname', 'text', 'lastname']
+Possible predicted topic: "lastname"
+Probability: 0.389
+
+Feature vector under test: ['e mail', 'invalid ', 'email', 'text', 'email']
+Possible predicted topic: "email"
+Probability: 0.502
+
+Feature vector under test: ['verify', 'e mail', 'verifyemail', 'text', 'verifyemail']
+Possible predicted topic: " mm dd yyyy "
+Probability: 0.538
+
+Feature vector under test: ['required', 'login', 'text', 'login']
+Possible predicted topic: "text"
+Probability: 0.226
+
+Feature vector under test: ['required', 'password', 'text', 'password']
+Possible predicted topic: "password"
+Probability: 0.973
+
+Feature vector under test: ['required', 'newpassword', 'password', 'newpassword']
+Possible predicted topic: "password"
+Probability: 0.973
+
+Feature vector under test: ['verify', 'password', 'verifypassword', 'password', 'verifypassword']
+Possible predicted topic: "password"
+Probability: 0.973
+
+Feature vector under test: ['email', 'address', 'username', 'email', 'email', 'user', 'example', 'text']
+Possible predicted topic: "email"
+Probability: 0.502
+
+Feature vector under test: ['password', 'password', 'password', 'password', 'password']
+Possible predicted topic: "password"
+Probability: 0.973
+
+Feature vector under test: ['password', 'password', 'confirmpassword', 'password', 'confirmpassword']
+Possible predicted topic: "password"
+Probability: 0.529
+
+Feature vector under test: ['first', 'name', 'firstname', 'firstname', 'text']
+Possible predicted topic: "firstname"
+Probability: 0.619
+
+Feature vector under test: ['middle', 'name', 'middlename', 'middlename', 'text']
+Possible predicted topic: "middlename"
+Probability: 0.232
+
+Feature vector under test: ['last', 'name', 'lastname', 'lastname', 'text']
+Possible predicted topic: "lastname"
+Probability: 0.389
+
+Feature vector under test: ['english', 'first', 'name', 'englishfirstname', 'englishfirstname', 'text']
+Possible predicted topic: "englishfirstname"
+Probability: 0.232
+
+Feature vector under test: ['english', 'middle', 'name', 'englishmiddlename', 'englishmiddlename', 'text']
+Possible predicted topic: "englishmiddlename"
+Probability: 0.318
+
+Feature vector under test: ['english', 'last', 'name', 'englishlastname', 'englishlastname', 'text']
+Possible predicted topic: "englishlastname"
+Probability: 0.318
+
+Feature vector under test: ['date', 'birth', 'date', 'dateofbirth', 'mm', 'dd', 'yyyy', 'text']
+Possible predicted topic: "date"
+Probability: 0.230
+
+Feature vector under test: ['area', 'city', 'code', 'local', 'number', 'homenumber', 'homenumber', 'text']
+Possible predicted topic: "homenumber"
+Probability: 0.241
+
+Feature vector under test: ['area', 'city', 'code', 'local', 'number', 'mobilenumber', 'mobilenumber', 'text']
+Possible predicted topic: "mobilenumber"
+Probability: 0.241
+
+Feature vector under test: ['time', 'checkbox', 'true']
+Possible predicted topic: "time"
+Probability: 0.304
+
+Feature vector under test: ['search ', 'searchterm', 'text', 'searchterm']
+Possible predicted topic: " mm dd yyyy "
+Probability: 0.538
+
+Feature vector under test: ['text', 'fname']
+Possible predicted topic: " mm dd yyyy "
+Probability: 0.538
+
+Feature vector under test: ['text', 'lname']
+Possible predicted topic: " mm dd yyyy "
+Probability: 0.538
+
+Feature vector under test: ['text', 'email']
+Possible predicted topic: "email"
+Probability: 0.502
+
+Feature vector under test: ['text', 'emailconf']
+Possible predicted topic: " mm dd yyyy "
+Probability: 0.538
+
+Feature vector under test: ['password', 'pword']
+Possible predicted topic: "password"
+Probability: 0.973
+
+Feature vector under test: ['password', 'conf', 'pword']
+Possible predicted topic: "password"
+Probability: 0.973
+
+Feature vector under test: ['pin', 'userid', 'login', 'text']
+Possible predicted topic: "text"
+Probability: 0.226
+
+Feature vector under test: ['password', 'password', 'password', 'password']
+Possible predicted topic: "password"
+Probability: 0.973
+
+Feature vector under test: ['first', 'given', 'name', 'text', 'aycreatefn', 'aycreatefn']
+Possible predicted topic: "aycreatefn"
+Probability: 0.311
+
+Feature vector under test: ['last', 'family', 'name', 'text', 'aycreateln', 'aycreateln']
+Possible predicted topic: "text"
+Probability: 0.193
+
+Feature vector under test: ['email', 'address', 'text', 'aycreateemail', 'aycreateemail']
+Possible predicted topic: "text"
+Probability: 0.193
+
+Feature vector under test: ['email', 'address', 'text', 'aycreateconfirmemail', 'aycreateconfirmemail']
+Possible predicted topic: "middlename"
+Probability: 0.232
+
+Feature vector under test: ['mm dd yyyy', 'text', 'aycreatedob', 'aycreatedob']
+Possible predicted topic: "aycreatedob"
+Probability: 0.450
+
+Feature vector under test: ['zip postal', 'code', 'text', 'aycreatepc', 'aycreatepc']
+Possible predicted topic: "aycreatepc"
+Probability: 0.368
+
+Feature vector under test: ['password', 'password', 'aycreatepassword', 'aycreatepassword']
+Possible predicted topic: "password"
+Probability: 0.450
+
+Feature vector under test: ['password', 'password', 'aycreateconfirmpassword', 'aycreateconfirmpassword']
+Possible predicted topic: "password"
+Probability: 0.450
+
