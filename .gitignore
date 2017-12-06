@@ -1,4 +1,4 @@
 .idea/
 __pycache__/
-gensim_transformation_output/
-sklearn_transformation_output/
+training_set_lda_model/
+lda_results

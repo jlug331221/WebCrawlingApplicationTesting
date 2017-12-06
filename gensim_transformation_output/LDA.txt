@@ -1,111 +1,111 @@
 \duke.html
 
-Corpus: MmCorpus(10 documents, 27 features, 40 non-zero entries)
+Corpus: MmCorpus(10 documents, 24 features, 36 non-zero entries)
 
 LDA_model topics and their corresponding probabilities:
-0.612*"password" + 0.015*"text" + 0.015*"aycreatedob" + 0.015*"aycreatepassword" + 0.015*"email" + 0.015*"30" + 0.015*"aycreateconfirmpassword" + 0.015*"address" + 0.015*"aycreateconfirmemail" + 0.015*"name"
-0.037*"password" + 0.037*"text" + 0.037*"aycreatedob" + 0.037*"aycreatepassword" + 0.037*"address" + 0.037*"confirm" + 0.037*"aycreateconfirmpassword" + 0.037*"aycreateemail" + 0.037*"30" + 0.037*"name"
-0.037*"password" + 0.037*"text" + 0.037*"aycreatepassword" + 0.037*"address" + 0.037*"confirm" + 0.037*"aycreatedob" + 0.037*"aycreateconfirmpassword" + 0.037*"userid" + 0.037*"aycreateconfirmemail" + 0.037*"email"
-0.313*"aycreatepassword" + 0.313*"password" + 0.015*"text" + 0.015*"address" + 0.015*"aycreatedob" + 0.015*"aycreateconfirmemail" + 0.015*"confirm" + 0.015*"email" + 0.015*"aycreateconfirmpassword" + 0.015*"aycreateln"
-0.134*"aycreatefn" + 0.134*"aycreateemail" + 0.134*"text" + 0.070*"first" + 0.070*"given" + 0.070*"120" + 0.070*"name" + 0.070*"30" + 0.070*"email" + 0.070*"address"
-0.153*"aycreateln" + 0.153*"aycreatedob" + 0.153*"text" + 0.080*"name" + 0.080*"30" + 0.080*"family" + 0.080*"last" + 0.080*"mm dd yyyy" + 0.007*"password" + 0.007*"aycreateconfirmpassword"
-0.164*"text" + 0.164*"login" + 0.164*"userid" + 0.164*"pin" + 0.015*"password" + 0.015*"aycreatepassword" + 0.015*"address" + 0.015*"aycreatedob" + 0.015*"aycreateconfirmpassword" + 0.015*"email"
-0.273*"aycreateconfirmpassword" + 0.273*"password" + 0.143*"confirm" + 0.013*"text" + 0.013*"address" + 0.013*"aycreatepassword" + 0.013*"30" + 0.013*"aycreatedob" + 0.013*"aycreateconfirmemail" + 0.013*"email"
-0.241*"aycreatepc" + 0.126*"10" + 0.126*"code" + 0.126*"zip postal" + 0.126*"text" + 0.011*"password" + 0.011*"aycreatepassword" + 0.011*"aycreatedob" + 0.011*"confirm" + 0.011*"email"
-0.241*"aycreateconfirmemail" + 0.126*"address" + 0.126*"email" + 0.126*"text" + 0.126*"confirm" + 0.011*"password" + 0.011*"aycreatedob" + 0.011*"aycreatepassword" + 0.011*"aycreatefn" + 0.011*"30"
+0.328*"aycreatedob" + 0.172*"text" + 0.172*"mm dd yyyy" + 0.016*"password" + 0.016*"aycreateconfirmpassword" + 0.016*"aycreatepc" + 0.016*"email" + 0.016*"aycreatefn" + 0.016*"aycreatepassword" + 0.016*"aycreateconfirmemail"
+0.284*"aycreateconfirmpassword" + 0.284*"password" + 0.149*"confirm" + 0.014*"text" + 0.014*"aycreatedob" + 0.014*"aycreatepassword" + 0.014*"address" + 0.014*"aycreateconfirmemail" + 0.014*"aycreatefn" + 0.014*"email"
+0.725*"password" + 0.012*"aycreatepassword" + 0.012*"text" + 0.012*"aycreatedob" + 0.012*"aycreatefn" + 0.012*"name" + 0.012*"userid" + 0.012*"aycreatepc" + 0.012*"address" + 0.012*"email"
+0.146*"aycreateemail" + 0.146*"aycreatepc" + 0.146*"text" + 0.146*"aycreatepassword" + 0.076*"code" + 0.076*"zip postal" + 0.076*"email" + 0.076*"address" + 0.009*"password" + 0.007*"aycreatedob"
+0.250*"aycreateln" + 0.131*"text" + 0.131*"name" + 0.131*"last" + 0.131*"family" + 0.012*"password" + 0.012*"confirm" + 0.012*"email" + 0.012*"aycreatedob" + 0.012*"aycreateconfirmpassword"
+0.042*"password" + 0.042*"text" + 0.042*"aycreatedob" + 0.042*"aycreatepassword" + 0.042*"name" + 0.042*"aycreatepc" + 0.042*"aycreateconfirmpassword" + 0.042*"userid" + 0.042*"aycreateln" + 0.042*"confirm"
+0.042*"password" + 0.042*"text" + 0.042*"aycreatedob" + 0.042*"email" + 0.042*"aycreatepassword" + 0.042*"aycreateconfirmpassword" + 0.042*"confirm" + 0.042*"aycreateemail" + 0.042*"aycreateln" + 0.042*"aycreatepc"
+0.042*"password" + 0.042*"text" + 0.042*"aycreatedob" + 0.042*"address" + 0.042*"aycreatepassword" + 0.042*"aycreateconfirmpassword" + 0.042*"aycreatepc" + 0.042*"confirm" + 0.042*"aycreateemail" + 0.042*"email"
+0.169*"text" + 0.169*"aycreateconfirmemail" + 0.089*"address" + 0.089*"email" + 0.089*"pin" + 0.089*"login" + 0.089*"userid" + 0.089*"confirm" + 0.008*"password" + 0.008*"aycreatedob"
+0.250*"aycreatefn" + 0.131*"text" + 0.131*"name" + 0.131*"first" + 0.131*"given" + 0.012*"password" + 0.012*"aycreatepassword" + 0.012*"email" + 0.012*"aycreateemail" + 0.012*"aycreateconfirmpassword"
 
 ** LDA_model top topic with probability: **
-([(4, 0.61194244006947562)], 'password')
-([(4, 0.037037193804454936)], 'password')
-([(4, 0.037037187241921836)], 'password')
-([(25, 0.3134336536123668)], 'aycreatepassword')
-([(8, 0.13375809827620502)], 'aycreatefn')
-([(12, 0.15328463832859365)], 'aycreateln')
-([(3, 0.16417958370025593)], 'text')
-([(26, 0.2727278934029484)], 'aycreateconfirmpassword')
-([(23, 0.24137925164023652)], 'aycreatepc')
-([(18, 0.24137886552004742)], 'aycreateconfirmemail')
+([(18, 0.3281244942737041)], 'aycreatedob')
+([(23, 0.28378404416251179)], 'aycreateconfirmpassword')
+([(4, 0.72514038463260322)], 'password')
+([(14, 0.14551153662951102)], 'aycreateemail')
+([(11, 0.2499999123380123)], 'aycreateln')
+([(4, 0.041666863052015217)], 'password')
+([(4, 0.041666829652274542)], 'password')
+([(4, 0.041666797367828225)], 'password')
+([(3, 0.16935509135321478)], 'text')
+([(8, 0.24999988507893703)], 'aycreatefn')
 
 
 *************************************************************
 
 \example_form_from_paper.html
 
-Corpus: MmCorpus(4 documents, 9 features, 13 non-zero entries)
+Corpus: MmCorpus(4 documents, 7 features, 9 non-zero entries)
 
 LDA_model topics and their corresponding probabilities:
-0.448*"email" + 0.172*"35" + 0.172*"text" + 0.035*"password" + 0.034*"25" + 0.034*"name" + 0.034*"check" + 0.034*"last" + 0.034*"verify"
-0.111*"password" + 0.111*"text" + 0.111*"35" + 0.111*"25" + 0.111*"verify" + 0.111*"check" + 0.111*"email" + 0.111*"last" + 0.111*"name"
-0.317*"name" + 0.317*"last" + 0.122*"text" + 0.122*"35" + 0.024*"password" + 0.024*"email" + 0.024*"25" + 0.024*"check" + 0.024*"verify"
-0.541*"password" + 0.148*"check" + 0.148*"25" + 0.082*"verify" + 0.016*"text" + 0.016*"35" + 0.016*"email" + 0.016*"last" + 0.016*"name"
+0.348*"email" + 0.238*"check" + 0.134*"text" + 0.130*"verify" + 0.096*"password" + 0.027*"name" + 0.027*"last"
+0.143*"text" + 0.143*"password" + 0.143*"verify" + 0.143*"email" + 0.143*"check" + 0.143*"name" + 0.143*"last"
+0.371*"last" + 0.371*"name" + 0.143*"text" + 0.029*"password" + 0.029*"email" + 0.029*"check" + 0.029*"verify"
+0.830*"password" + 0.031*"verify" + 0.030*"check" + 0.027*"text" + 0.027*"email" + 0.027*"name" + 0.027*"last"
 
 ** LDA_model top topic with probability: **
-([(4, 0.44813227089613095)], 'email')
-([(5, 0.11117758338881492)], 'password')
-([(1, 0.31709966699982789)], 'name')
-([(5, 0.54099262827464722)], 'password')
+([(3, 0.34816125065082304)], 'email')
+([(2, 0.14305081729657487)], 'text')
+([(0, 0.37126973622673076)], 'last')
+([(4, 0.82975048276418961)], 'password')
 
 
 *************************************************************
 
 \georgetown.html
 
-Corpus: MmCorpus(10 documents, 27 features, 40 non-zero entries)
+Corpus: MmCorpus(10 documents, 24 features, 36 non-zero entries)
 
 LDA_model topics and their corresponding probabilities:
-0.241*"aycreateconfirmemail" + 0.126*"address" + 0.126*"email" + 0.126*"text" + 0.126*"confirm" + 0.011*"password" + 0.011*"aycreatepassword" + 0.011*"aycreatedob" + 0.011*"aycreateconfirmpassword" + 0.011*"aycreatepc"
-0.700*"password" + 0.012*"aycreatepassword" + 0.012*"text" + 0.012*"aycreatedob" + 0.012*"aycreateconfirmpassword" + 0.012*"userid" + 0.012*"aycreatefn" + 0.012*"confirm" + 0.012*"30" + 0.012*"mm dd yyyy"
-0.196*"text" + 0.196*"aycreatedob" + 0.103*"pin" + 0.103*"mm dd yyyy" + 0.103*"userid" + 0.103*"login" + 0.009*"password" + 0.009*"aycreatepassword" + 0.009*"aycreateconfirmpassword" + 0.009*"aycreatepc"
-0.273*"aycreateconfirmpassword" + 0.273*"password" + 0.143*"confirm" + 0.013*"text" + 0.013*"aycreatepassword" + 0.013*"aycreatedob" + 0.013*"aycreateln" + 0.013*"aycreatefn" + 0.013*"login" + 0.013*"aycreateconfirmemail"
-0.216*"aycreatefn" + 0.113*"name" + 0.113*"30" + 0.113*"first" + 0.113*"given" + 0.113*"text" + 0.010*"password" + 0.010*"aycreatepassword" + 0.010*"aycreatedob" + 0.010*"aycreateconfirmpassword"
-0.037*"password" + 0.037*"text" + 0.037*"aycreatepassword" + 0.037*"aycreatedob" + 0.037*"aycreatepc" + 0.037*"aycreateconfirmpassword" + 0.037*"confirm" + 0.037*"address" + 0.037*"name" + 0.037*"email"
-0.216*"aycreateln" + 0.113*"30" + 0.113*"family" + 0.113*"last" + 0.113*"name" + 0.113*"text" + 0.010*"password" + 0.010*"aycreatepassword" + 0.010*"aycreatedob" + 0.010*"mm dd yyyy"
-0.037*"password" + 0.037*"text" + 0.037*"aycreatepassword" + 0.037*"aycreatedob" + 0.037*"email" + 0.037*"login" + 0.037*"confirm" + 0.037*"30" + 0.037*"name" + 0.037*"mm dd yyyy"
-0.037*"password" + 0.037*"text" + 0.037*"aycreatepassword" + 0.037*"aycreatedob" + 0.037*"name" + 0.037*"mm dd yyyy" + 0.037*"aycreateconfirmemail" + 0.037*"aycreateln" + 0.037*"userid" + 0.037*"confirm"
-0.126*"aycreateemail" + 0.126*"aycreatepc" + 0.126*"text" + 0.126*"aycreatepassword" + 0.066*"10" + 0.066*"code" + 0.066*"zip postal" + 0.066*"120" + 0.066*"email" + 0.066*"address"
+0.202*"text" + 0.202*"aycreatedob" + 0.106*"pin" + 0.106*"login" + 0.106*"userid" + 0.106*"mm dd yyyy" + 0.010*"password" + 0.010*"confirm" + 0.010*"address" + 0.010*"aycreatepassword"
+0.146*"aycreateconfirmemail" + 0.146*"aycreateln" + 0.146*"text" + 0.076*"confirm" + 0.076*"family" + 0.076*"last" + 0.076*"name" + 0.076*"email" + 0.076*"address" + 0.007*"password"
+0.042*"password" + 0.042*"text" + 0.042*"aycreatepassword" + 0.042*"aycreateconfirmpassword" + 0.042*"confirm" + 0.042*"aycreateln" + 0.042*"email" + 0.042*"name" + 0.042*"address" + 0.042*"aycreatepc"
+0.042*"password" + 0.042*"text" + 0.042*"confirm" + 0.042*"aycreatedob" + 0.042*"aycreatepc" + 0.042*"address" + 0.042*"aycreateln" + 0.042*"aycreatefn" + 0.042*"aycreatepassword" + 0.042*"name"
+0.044*"aycreatepc" + 0.043*"code" + 0.043*"text" + 0.043*"zip postal" + 0.041*"password" + 0.041*"aycreatedob" + 0.041*"address" + 0.041*"confirm" + 0.041*"aycreatepassword" + 0.041*"aycreateconfirmemail"
+0.042*"text" + 0.042*"password" + 0.042*"confirm" + 0.042*"aycreatepassword" + 0.042*"address" + 0.042*"aycreateconfirmpassword" + 0.042*"aycreatepc" + 0.042*"aycreatedob" + 0.042*"name" + 0.042*"aycreateconfirmemail"
+0.284*"aycreatepc" + 0.149*"zip postal" + 0.149*"text" + 0.148*"code" + 0.014*"password" + 0.014*"aycreatedob" + 0.014*"aycreatepassword" + 0.014*"aycreateconfirmpassword" + 0.014*"address" + 0.014*"confirm"
+0.526*"password" + 0.136*"aycreateconfirmpassword" + 0.136*"aycreatepassword" + 0.071*"confirm" + 0.006*"text" + 0.006*"address" + 0.006*"aycreatepc" + 0.006*"aycreatedob" + 0.006*"aycreateln" + 0.006*"email"
+0.250*"aycreatefn" + 0.131*"name" + 0.131*"first" + 0.131*"given" + 0.131*"text" + 0.012*"password" + 0.012*"aycreateconfirmpassword" + 0.012*"aycreatedob" + 0.012*"aycreateln" + 0.012*"confirm"
+0.284*"aycreateemail" + 0.149*"email" + 0.149*"address" + 0.149*"text" + 0.014*"password" + 0.014*"aycreatepassword" + 0.014*"confirm" + 0.014*"aycreatepc" + 0.014*"aycreatedob" + 0.014*"aycreateconfirmemail"
 
 ** LDA_model top topic with probability: **
-([(18, 0.2413787993154437)], 'aycreateconfirmemail')
-([(4, 0.70011723012819926)], 'password')
-([(3, 0.19626273167983954)], 'text')
-([(26, 0.27272769964743737)], 'aycreateconfirmpassword')
-([(8, 0.21649481294016398)], 'aycreatefn')
-([(4, 0.037037171448821619)], 'password')
-([(12, 0.21649481091670214)], 'aycreateln')
-([(4, 0.03703715531331201)], 'password')
-([(4, 0.037037194508795716)], 'password')
-([(15, 0.12552539378680791)], 'aycreateemail')
+([(3, 0.2019237191588282)], 'text')
+([(16, 0.1458335423398483)], 'aycreateconfirmemail')
+([(4, 0.041666800790262769)], 'password')
+([(4, 0.041666775495670168)], 'password')
+([(21, 0.044354397044121828)], 'aycreatepc')
+([(3, 0.041666805600321682)], 'text')
+([(21, 0.28350747113127028)], 'aycreatepc')
+([(4, 0.52597403318518232)], 'password')
+([(8, 0.24999982318303729)], 'aycreatefn')
+([(14, 0.28378313957903029)], 'aycreateemail')
 
 
 *************************************************************
 
 \ncsu.html
 
-Corpus: MmCorpus(10 documents, 27 features, 40 non-zero entries)
+Corpus: MmCorpus(10 documents, 24 features, 36 non-zero entries)
 
 LDA_model topics and their corresponding probabilities:
-0.313*"aycreatepassword" + 0.313*"password" + 0.015*"text" + 0.015*"aycreatefn" + 0.015*"aycreatedob" + 0.015*"email" + 0.015*"mm dd yyyy" + 0.015*"aycreateconfirmpassword" + 0.015*"address" + 0.015*"confirm"
-0.037*"text" + 0.037*"password" + 0.037*"aycreatepassword" + 0.037*"email" + 0.037*"aycreatedob" + 0.037*"aycreateconfirmpassword" + 0.037*"address" + 0.037*"pin" + 0.037*"aycreateconfirmemail" + 0.037*"mm dd yyyy"
-0.037*"password" + 0.037*"text" + 0.037*"aycreatedob" + 0.037*"aycreateconfirmpassword" + 0.037*"address" + 0.037*"aycreatepassword" + 0.037*"30" + 0.037*"email" + 0.037*"aycreatefn" + 0.037*"pin"
-0.164*"text" + 0.164*"userid" + 0.164*"login" + 0.164*"pin" + 0.015*"password" + 0.015*"aycreatedob" + 0.015*"aycreateconfirmpassword" + 0.015*"address" + 0.015*"aycreateconfirmemail" + 0.015*"aycreatepassword"
-0.216*"aycreatefn" + 0.113*"name" + 0.113*"given" + 0.113*"30" + 0.113*"first" + 0.113*"text" + 0.010*"password" + 0.010*"aycreatedob" + 0.010*"aycreatepassword" + 0.010*"address"
-0.037*"text" + 0.037*"password" + 0.037*"aycreatepassword" + 0.037*"aycreatedob" + 0.037*"address" + 0.037*"aycreatefn" + 0.037*"aycreateconfirmpassword" + 0.037*"confirm" + 0.037*"30" + 0.037*"userid"
-0.241*"aycreateconfirmemail" + 0.126*"address" + 0.126*"email" + 0.126*"confirm" + 0.126*"text" + 0.011*"password" + 0.011*"aycreatepassword" + 0.011*"aycreatedob" + 0.011*"aycreatefn" + 0.011*"aycreatepc"
-0.216*"aycreateln" + 0.113*"30" + 0.113*"name" + 0.113*"last" + 0.113*"family" + 0.113*"text" + 0.010*"password" + 0.010*"aycreateconfirmpassword" + 0.010*"aycreatedob" + 0.010*"aycreatefn"
-0.166*"text" + 0.112*"aycreateemail" + 0.112*"aycreatepc" + 0.112*"aycreatedob" + 0.059*"zip postal" + 0.059*"10" + 0.059*"code" + 0.059*"120" + 0.059*"mm dd yyyy" + 0.059*"email"
-0.521*"password" + 0.179*"aycreateconfirmpassword" + 0.094*"confirm" + 0.009*"text" + 0.009*"aycreatedob" + 0.009*"aycreatefn" + 0.009*"aycreatepassword" + 0.009*"pin" + 0.009*"mm dd yyyy" + 0.009*"aycreateconfirmemail"
+0.042*"text" + 0.042*"password" + 0.042*"aycreatedob" + 0.042*"aycreateemail" + 0.042*"aycreateconfirmpassword" + 0.042*"aycreatepassword" + 0.042*"login" + 0.042*"name" + 0.042*"address" + 0.042*"email"
+0.725*"password" + 0.012*"aycreateconfirmpassword" + 0.012*"confirm" + 0.012*"text" + 0.012*"aycreatepassword" + 0.012*"aycreatedob" + 0.012*"name" + 0.012*"aycreateemail" + 0.012*"aycreateln" + 0.012*"address"
+0.157*"text" + 0.157*"aycreatefn" + 0.157*"aycreateemail" + 0.082*"email" + 0.082*"address" + 0.082*"first" + 0.082*"given" + 0.082*"name" + 0.007*"password" + 0.007*"aycreatedob"
+0.250*"aycreateln" + 0.131*"name" + 0.131*"text" + 0.131*"family" + 0.131*"last" + 0.012*"password" + 0.012*"aycreatepassword" + 0.012*"login" + 0.012*"aycreatedob" + 0.012*"address"
+0.328*"aycreatepassword" + 0.328*"password" + 0.016*"text" + 0.016*"aycreatedob" + 0.016*"address" + 0.016*"aycreateemail" + 0.016*"email" + 0.016*"confirm" + 0.016*"aycreateln" + 0.016*"aycreateconfirmpassword"
+0.042*"password" + 0.042*"text" + 0.042*"aycreatepassword" + 0.042*"aycreatedob" + 0.042*"aycreateemail" + 0.042*"aycreatepc" + 0.042*"address" + 0.042*"name" + 0.042*"email" + 0.042*"login"
+0.042*"text" + 0.042*"password" + 0.042*"aycreatedob" + 0.042*"name" + 0.042*"aycreatepassword" + 0.042*"aycreatepc" + 0.042*"aycreateemail" + 0.042*"aycreateconfirmemail" + 0.042*"confirm" + 0.042*"login"
+0.159*"text" + 0.108*"aycreateconfirmemail" + 0.108*"aycreatedob" + 0.108*"confirm" + 0.108*"aycreateconfirmpassword" + 0.057*"pin" + 0.057*"userid" + 0.057*"mm dd yyyy" + 0.057*"login" + 0.057*"address"
+0.284*"aycreatepc" + 0.149*"text" + 0.149*"zip postal" + 0.149*"code" + 0.014*"password" + 0.014*"aycreatepassword" + 0.014*"aycreatedob" + 0.014*"aycreateln" + 0.014*"name" + 0.014*"aycreateemail"
+0.042*"text" + 0.042*"password" + 0.042*"aycreatedob" + 0.042*"confirm" + 0.042*"aycreateemail" + 0.042*"address" + 0.042*"name" + 0.042*"aycreateln" + 0.042*"login" + 0.042*"aycreatepassword"
 
 ** LDA_model top topic with probability: **
-([(25, 0.31343302295836056)], 'aycreatepassword')
-([(3, 0.037037137667958971)], 'text')
-([(4, 0.037037134855513763)], 'password')
-([(3, 0.16417978309941897)], 'text')
-([(8, 0.21649478326465202)], 'aycreatefn')
-([(3, 0.03703715307555485)], 'text')
-([(18, 0.24137854876406473)], 'aycreateconfirmemail')
-([(12, 0.21649480977068922)], 'aycreateln')
-([(3, 0.16577538249398066)], 'text')
-([(4, 0.52136792189354719)], 'password')
+([(3, 0.041666851460407002)], 'text')
+([(4, 0.72500952214092684)], 'password')
+([(3, 0.15671684228003846)], 'text')
+([(11, 0.24999964585209708)], 'aycreateln')
+([(22, 0.32812559112397427)], 'aycreatepassword')
+([(4, 0.041666816835394097)], 'password')
+([(3, 0.041666794401331093)], 'text')
+([(3, 0.15949892954659459)], 'text')
+([(21, 0.283783430302813)], 'aycreatepc')
+([(3, 0.041666790286170964)], 'text')
 
 
 *************************************************************
@@ -115,54 +115,54 @@ LDA_model topics and their corresponding probabilities:
 Corpus: MmCorpus(3 documents, 9 features, 12 non-zero entries)
 
 LDA_model topics and their corresponding probabilities:
-0.112*"name " + 0.112*"text" + 0.111*" last family" + 0.111*"middle" + 0.111*"name s  " + 0.111*"lastname" + 0.111*"middlenames" + 0.111*"first given" + 0.111*"firstname"
-0.291*"firstname" + 0.168*"name " + 0.167*"text" + 0.166*"first given" + 0.042*"lastname" + 0.042*" last family" + 0.042*"middlenames" + 0.042*"middle" + 0.042*"name s  "
-0.180*"middlenames" + 0.180*"lastname" + 0.180*"text" + 0.103*"name s  " + 0.103*"middle" + 0.103*" last family" + 0.102*"name " + 0.026*"firstname" + 0.026*"first given"
+0.291*"firstname" + 0.167*"text" + 0.167*"name " + 0.167*"first given" + 0.042*"lastname" + 0.042*"name s  " + 0.042*" last family" + 0.042*"middle" + 0.042*"middlenames"
+0.291*"lastname" + 0.167*"text" + 0.167*"name " + 0.166*" last family" + 0.042*"firstname" + 0.042*"middlenames" + 0.042*"first given" + 0.042*"name s  " + 0.042*"middle"
+0.291*"middlenames" + 0.167*"text" + 0.166*"middle" + 0.166*"name s  " + 0.042*"name " + 0.042*"firstname" + 0.042*"lastname" + 0.042*" last family" + 0.042*"first given"
 
 ** LDA_model top topic with probability: **
-([(1, 0.11168234407060473)], 'name ')
-([(3, 0.29066104862109804)], 'firstname')
-([(6, 0.17983328057910947)], 'middlenames')
+([(3, 0.29145925337829587)], 'firstname')
+([(8, 0.29145075187996949)], 'lastname')
+([(6, 0.2914870933621454)], 'middlenames')
 
 
 *************************************************************
 
 \simple_form.html
 
-Corpus: MmCorpus(2 documents, 6 features, 9 non-zero entries)
+Corpus: MmCorpus(2 documents, 5 features, 7 non-zero entries)
 
 LDA_model topics and their corresponding probabilities:
-0.323*"name" + 0.312*"last" + 0.136*"text" + 0.136*"45" + 0.047*"firstname" + 0.046*"first"
-0.281*"firstname" + 0.169*"first" + 0.168*"45" + 0.167*"text" + 0.157*"name" + 0.058*"last"
+0.313*"name" + 0.243*"last" + 0.172*"text" + 0.171*"firstname" + 0.101*"first"
+0.205*"firstname" + 0.203*"first" + 0.199*"text" + 0.197*"name" + 0.196*"last"
 
 ** LDA_model top topic with probability: **
-([(1, 0.32289953026917195)], 'name')
-([(2, 0.28143025842538005)], 'firstname')
+([(1, 0.31270934889759444)], 'name')
+([(2, 0.20450583709082953)], 'firstname')
 
 
 *************************************************************
 
 \ucf.html
 
-Corpus: MmCorpus(7 documents, 11 features, 19 non-zero entries)
+Corpus: MmCorpus(7 documents, 9 features, 13 non-zero entries)
 
 LDA_model topics and their corresponding probabilities:
-0.385*"username" + 0.205*"text" + 0.205*"50" + 0.026*"password" + 0.026*"birthdate" + 0.026*"confirmpassword" + 0.026*"confirmusername" + 0.026*"lastname" + 0.026*"128" + 0.026*"firstname"
-0.250*"lastname" + 0.250*"birthdate" + 0.133*"date" + 0.133*"50" + 0.133*"text" + 0.017*"password" + 0.017*"128" + 0.017*"confirmpassword" + 0.017*"confirmusername" + 0.017*"username"
-0.091*"text" + 0.091*"50" + 0.091*"password" + 0.091*"128" + 0.091*"confirmusername" + 0.091*"birthdate" + 0.091*"firstname" + 0.091*"lastname" + 0.091*"date" + 0.091*"username"
-0.091*"50" + 0.091*"text" + 0.091*"password" + 0.091*"128" + 0.091*"birthdate" + 0.091*"confirmusername" + 0.091*"confirmpassword" + 0.091*"firstname" + 0.091*"lastname" + 0.091*"date"
-0.232*"password" + 0.158*"firstname" + 0.158*"text" + 0.158*"50" + 0.157*"confirmusername" + 0.084*"128" + 0.011*"birthdate" + 0.011*"confirmpassword" + 0.011*"username" + 0.011*"lastname"
-0.384*"confirmpassword" + 0.205*"128" + 0.205*"password" + 0.027*"confirmusername" + 0.026*"50" + 0.026*"text" + 0.026*"birthdate" + 0.026*"firstname" + 0.026*"lastname" + 0.026*"username"
-0.091*"50" + 0.091*"password" + 0.091*"text" + 0.091*"confirmusername" + 0.091*"128" + 0.091*"birthdate" + 0.091*"confirmpassword" + 0.091*"firstname" + 0.091*"lastname" + 0.091*"date"
+0.500*"lastname" + 0.267*"text" + 0.033*"password" + 0.033*"firstname" + 0.033*"birthdate" + 0.033*"username" + 0.033*"confirmusername" + 0.033*"confirmpassword" + 0.033*"date"
+0.500*"confirmpassword" + 0.267*"password" + 0.033*"text" + 0.033*"username" + 0.033*"confirmusername" + 0.033*"lastname" + 0.033*"firstname" + 0.033*"date" + 0.033*"birthdate"
+0.431*"password" + 0.294*"firstname" + 0.157*"text" + 0.020*"username" + 0.020*"lastname" + 0.020*"confirmusername" + 0.020*"birthdate" + 0.020*"confirmpassword" + 0.020*"date"
+0.294*"birthdate" + 0.294*"confirmusername" + 0.157*"date" + 0.157*"text" + 0.020*"password" + 0.020*"username" + 0.020*"firstname" + 0.020*"confirmpassword" + 0.020*"lastname"
+0.111*"text" + 0.111*"password" + 0.111*"confirmusername" + 0.111*"birthdate" + 0.111*"firstname" + 0.111*"username" + 0.111*"date" + 0.111*"confirmpassword" + 0.111*"lastname"
+0.500*"username" + 0.267*"text" + 0.033*"password" + 0.033*"confirmusername" + 0.033*"firstname" + 0.033*"confirmpassword" + 0.033*"lastname" + 0.033*"birthdate" + 0.033*"date"
+0.111*"text" + 0.111*"password" + 0.111*"firstname" + 0.111*"confirmusername" + 0.111*"birthdate" + 0.111*"confirmpassword" + 0.111*"username" + 0.111*"lastname" + 0.111*"date"
 
 ** LDA_model top topic with probability: **
-([(0, 0.38455862193022167)], 'username')
-([(8, 0.25001081718810592)], 'lastname')
-([(2, 0.090911878755499873)], 'text')
-([(1, 0.090913425791387767)], '50')
-([(4, 0.23185481209311942)], 'password')
-([(6, 0.38350058580773255)], 'confirmpassword')
-([(1, 0.090911687880031192)], '50')
+([(6, 0.49992480113733073)], 'lastname')
+([(4, 0.50001645944938755)], 'confirmpassword')
+([(3, 0.43142040997570463)], 'password')
+([(7, 0.29414112411052457)], 'birthdate')
+([(1, 0.11111963009015939)], 'text')
+([(0, 0.49992554242134513)], 'username')
+([(1, 0.1111170642890011)], 'text')
 
 
 *************************************************************
